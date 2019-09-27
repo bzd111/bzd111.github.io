@@ -5,9 +5,11 @@ permalink: /about/
 ---
 
 # 关于我......
-熟悉python,略懂js、go、react、vue,会在这分享一些知识和想法
 
-## 联系我：
+熟悉 python,略懂 js、go、react、vue,会在这分享一些知识和想法
+
+## 联系我(备注: 来自 blog)：
+
 ![](/public/me.jpeg)
 
 ## 鼓励作者
