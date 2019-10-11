@@ -80,4 +80,4 @@ macos 可以使用`brew install node`会自动安装 npm
 
 ## 现在来看看预览页面
 
-![preview](/assert/markdown-preview.jpg)
+![preview](/assets/markdown-preview.jpg)
