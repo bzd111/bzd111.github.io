@@ -12,6 +12,7 @@ title: "vim编写markdown文件"
     * [配置](#配置)
 * [上手体验](#上手体验)
     * [现在来看看预览页面](#现在来看看预览页面)
+* [配置文件](#配置文件)
 
 <!-- vim-markdown-toc -->
 
@@ -81,3 +82,7 @@ macos 可以使用`brew install node`会自动安装 npm
 ## 现在来看看预览页面
 
 ![preview](/assets/markdown-preview.jpg)
+
+# 配置文件
+
+[neovim 配置文件](/assets/init.vim)
