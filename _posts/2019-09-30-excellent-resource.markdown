@@ -17,6 +17,7 @@ title: "优质资源收集"
     * [Video](#video)
     * [Blog](#blog)
 * [JS](#js)
+* [Docs](#docs)
     * [React](#react)
         * [Docs](#docs)
     * [Vue](#vue)
@@ -108,11 +109,17 @@ title: "优质资源收集"
 
 # JS
 
+# Docs
+
+- [ ] [Eloquent JavaScript](http://eloquentjavascript.net/)
+- [ ] [You Dont Know JS](https://github.com/cezaraugusto/You-Dont-Know-JS)
+
 ## React
 
 ### Docs
 
 - [ ] [React 官方文档](https://zh-hans.reactjs.org/docs/getting-started.html)
+- [x] [dva.js 知识导图](https://github.com/dvajs/dva-knowledgemap/blob/master/README.md)
 
 ## Vue
 
