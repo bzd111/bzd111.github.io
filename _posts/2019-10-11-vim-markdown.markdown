@@ -13,6 +13,8 @@ title: "vim编写markdown文件"
 * [上手体验](#上手体验)
     * [现在来看看预览页面](#现在来看看预览页面)
 * [配置文件](#配置文件)
+* [注意(二更)](#注意-二更)
+* [Reference](#reference)
 
 <!-- vim-markdown-toc -->
 
@@ -86,3 +88,22 @@ macos 可以使用`brew install node`会自动安装 npm
 # 配置文件
 
 [neovim 配置文件](/assets/init.vim)
+
+# 注意(二更)
+
+prettier 使用[remark-parse](https://github.com/remarkjs/remark/tree/master/packages/remark-parse)来格式化 markdown。
+
+会自动转义一些符号，比如会把**file**.py 转换成**file**.py，*alpha*变成斜体，所以如果我们要保留下划线的话，需要用\防止转义，用法就是在每个\_前面加上\
+
+_alpha_ 斜体
+
+\_alpha\_ 保留单个下划线
+
+**file** 加粗
+
+\_\_file\_\_ 保留单个两个划线
+
+# Reference
+
+- https://guides.github.com/features/mastering-markdown/#syntax
+- https://prettier.io/docs/en/options.html
