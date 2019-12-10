@@ -1,3 +1,31 @@
+---
+layout: post
+title: "[笔记]网络知识"
+---
+
+<!-- vim-markdown-toc Redcarpet -->
+
+* [前言](#前言)
+* [记录](#记录)
+    * [网络硬件](#网络硬件)
+    * [网络部署](#网络部署)
+    * [Linux 协议栈](#linux-协议栈)
+        * [Linux 收包流程](#linux-收包流程)
+        * [Linux 发包流程](#linux-发包流程)
+    * [Linux 防火墙](#linux-防火墙)
+        * [iptables](#iptables)
+            * [iptables 命令](#iptables-命令)
+            * [iptables 匹配规则](#iptables-匹配规则)
+    * [前言网络传输技术](#前言网络传输技术)
+        * [TCP 拥塞控制算法](#tcp-拥塞控制算法)
+    * [HTTP](#http)
+        * [HTTP1.0](#http1-0)
+        * [HTTP1.1(最主流)](#http1-1-最主流)
+        * [HTTP2.0](#http2-0)
+        * [HTTP3.0](#http3-0)
+
+<!-- vim-markdown-toc -->
+
 # 前言
 
 前几天看了[【Go 夜读】#68 网络知识十全大补丸](https://www.youtube.com/watch?v=30wCahZEjNg)，现在简单地做下笔记，笔者感觉讲的很好，推荐大家去看下
