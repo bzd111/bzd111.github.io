@@ -1,26 +1,26 @@
 ---
-<!-- layout: post -->
+layout: post
 title: "[笔记]aiohttp 使用"
 ---
 
 <!-- vim-markdown-toc GFM -->
 
-- [前言](#前言)
-- [asyncio](#asyncio)
-  - [asyncio.run](#asynciorun)
-  - [asyncio 运行多任务](#asyncio-运行多任务)
-- [aiohttp](#aiohttp)
-  - [client](#client)
-  - [server](#server)
-    - [A Minimal Application](#a-minimal-application)
-    - [装饰器方法](#装饰器方法)
-    - [url 参数和 query 参数](#url-参数和-query-参数)
-    - [返回 json 的 response](#返回-json-的-response)
-    - [使用数据库](#使用数据库)
-  - [template](#template)
-  - [middleware](#middleware)
-  - [seesion](#seesion)
-- [Reference](#reference)
+* [前言](#前言)
+* [asyncio](#asyncio)
+    * [asyncio.run](#asynciorun)
+    * [asyncio 运行多任务](#asyncio-运行多任务)
+* [aiohttp](#aiohttp)
+    * [client](#client)
+    * [server](#server)
+        * [A Minimal Application](#a-minimal-application)
+        * [装饰器方法](#装饰器方法)
+        * [url 参数和 query 参数](#url-参数和-query-参数)
+        * [返回 json 的 response](#返回-json-的-response)
+        * [使用数据库](#使用数据库)
+    * [template](#template)
+    * [middleware](#middleware)
+    * [seesion](#seesion)
+* [Reference](#reference)
 
 <!-- vim-markdown-toc -->
 
