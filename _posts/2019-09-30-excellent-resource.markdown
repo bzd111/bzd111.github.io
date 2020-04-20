@@ -5,29 +5,30 @@ title: "优质资源收集"
 
 <!-- vim-markdown-toc Redcarpet -->
 
-* [前言](#前言)
-* [Python](#python)
-    * [Docs](#docs)
-    * [Video](#video)
-    * [Blog](#blog)
-    * [Tutorial](#tutorial)
-    * [Others](#others)
-* [Go](#go)
-    * [Docs](#docs)
-    * [Video](#video)
-    * [Blog](#blog)
-* [JS](#js)
-* [Docs](#docs)
-    * [React](#react)
-        * [Docs](#docs)
-    * [Vue](#vue)
-        * [Video](#video)
-* [Git && GitHub](#git-amp-amp-github)
-    * [Docs](#docs)
-* [Linux](#linux)
-    * [Docs](#docs)
-* [Macos](#macos)
-    * [Docs](#docs)
+- [前言](#前言)
+- [Python](#python)
+  - [Docs](#docs)
+  - [Video](#video)
+  - [Blog](#blog)
+  - [Tutorial](#tutorial)
+  - [Others](#others)
+- [Go](#go)
+  - [Docs](#docs)
+  - [Video](#video)
+  - [Blog](#blog)
+- [JS](#js)
+- [Docs](#docs)
+  - [React](#react)
+    - [Docs](#docs)
+  - [Vue](#vue)
+    - [Video](#video)
+- [Git && GitHub](#git-amp-amp-github)
+  - [Docs](#docs)
+- [Linux](#linux)
+  - [Docs](#docs)
+- [Macos](#macos)
+  - [Docs](#docs)
+- [Cheets](#cheets)
 
 <!-- vim-markdown-toc -->
 
@@ -63,6 +64,7 @@ title: "优质资源收集"
 
 - [ ] [莫烦 Python](https://morvanzhou.github.io/learning-steps/)
 - [ ] [Pycon2019](https://www.youtube.com/channel/UCxs2IIVXaEHHA4BtTiWZ2mQ)
+- [ ] [Pycon2020](https://www.youtube.com/channel/UCMjMBMGt0WJQLeluw6qNJuA)
 
 ## Blog
 
@@ -86,11 +88,13 @@ title: "优质资源收集"
 
 ## Docs
 
-- [ ] [build web application with golang](https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/preface.md)
+- [x] [build web application with golang](https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/preface.md)
 - [ ] [learn go with tests](https://github.com/quii/learn-go-with-tests)
 - [ ] [跟煎鱼学 Go](https://book.eddycjy.com/golang/)
 - [ ] [Golang Club](https://www.kancloud.cn/liupengjie/go/570004)
 - [ ] [浅谈 Go 语言实现原理](https://draveness.me/golang/)
+- [ ] [K8S 训练营](https://www.qikqiak.com/k8strain/)
+- [ ] [关注容器、kubernetes、devops、python、golang、微服务等技术 🎉🎉🎉](https://github.com/cnych/qikqiak.com/)
 
 ## Video
 
@@ -147,3 +151,7 @@ title: "优质资源收集"
 ## Docs
 
 - [x] [macOS Setup Guide](https://sourabhbajaj.com/mac-setup/)
+
+# Cheets
+
+- [Apply best practices via CheatSheets](https://github.com/dennyzhang/cheatsheet.dennyzhang.com)
