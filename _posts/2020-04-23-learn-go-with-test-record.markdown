@@ -723,56 +723,56 @@ sync.WaitGroup 结构体有个 noCopy 对象，这个对象不允许拷贝，所
 
 context 用来管理协程运行，contextd 只要有 5 个方法
 
-    ```golang
-    Background() Context // 根节点
-    WithCancel(parent Context) (ctx Context, cancel CancelFunc)
-    WithDeadline(parent Context, deadline time.Time) (Context, CancelFunc)
-    WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc)
-    WithValue(parent Context, key interface{}, val interface{}) Context
-    ```
+```golang
+Background() Context // 根节点
+WithCancel(parent Context) (ctx Context, cancel CancelFunc)
+WithDeadline(parent Context, deadline time.Time) (Context, CancelFunc)
+WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc)
+WithValue(parent Context, key interface{}, val interface{}) Context
+```
 
-    ```golang
-    ctx, cancel := context.WithCancel(context.Background())
-    cancel()  // 终止 context
-    ```
+```golang
+ctx, cancel := context.WithCancel(context.Background())
+cancel()  // 终止 context
+```
 
-    ```golang
-    package context3
+```golang
+package context3
 
-    import (
-        "context"
-        "errors"
-        "net/http"
-        "testing"
-        "time"
-    )
-    func (s *SpyStore) Fetch(ctx context.Context) (string, error) {
-        data := make(chan string, 1)
+import (
+    "context"
+    "errors"
+    "net/http"
+    "testing"
+    "time"
+)
+func (s *SpyStore) Fetch(ctx context.Context) (string, error) {
+    data := make(chan string, 1)
 
-        go func() {
-            var result string
-            for _, c := range s.response {
-                select {
-                // 如果context被取消就会走到这个case
-                case <-ctx.Done():
-                    s.t.Log("spy store got cancelled")
-                    return
-                default:
-                    time.Sleep(10 * time.Millisecond)
-                    result += string(c)
-                }
+    go func() {
+        var result string
+        for _, c := range s.response {
+            select {
+            // 如果context被取消就会走到这个case
+            case <-ctx.Done():
+                s.t.Log("spy store got cancelled")
+                return
+            default:
+                time.Sleep(10 * time.Millisecond)
+                result += string(c)
             }
-            data <- result
-        }()
-
-        select {
-        case <-ctx.Done():
-            return "", ctx.Err()
-        case res := <-data:
-            return res, nil
         }
+        data <- result
+    }()
+
+    select {
+    case <-ctx.Done():
+        return "", ctx.Err()
+    case res := <-data:
+        return res, nil
     }
-    ```
+}
+```
 
 # Reference
 
