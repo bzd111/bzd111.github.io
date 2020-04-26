@@ -5,30 +5,33 @@ title: "优质资源收集"
 
 <!-- vim-markdown-toc Redcarpet -->
 
-- [前言](#前言)
-- [Python](#python)
-  - [Docs](#docs)
-  - [Video](#video)
-  - [Blog](#blog)
-  - [Tutorial](#tutorial)
-  - [Others](#others)
-- [Go](#go)
-  - [Docs](#docs)
-  - [Video](#video)
-  - [Blog](#blog)
-- [JS](#js)
-- [Docs](#docs)
-  - [React](#react)
-    - [Docs](#docs)
-  - [Vue](#vue)
-    - [Video](#video)
-- [Git && GitHub](#git-amp-amp-github)
-  - [Docs](#docs)
-- [Linux](#linux)
-  - [Docs](#docs)
-- [Macos](#macos)
-  - [Docs](#docs)
-- [Cheets](#cheets)
+* [前言](#前言)
+* [Python](#python)
+    * [Docs](#docs)
+    * [Video](#video)
+    * [Blog](#blog)
+    * [Tutorial](#tutorial)
+    * [Others](#others)
+* [Go](#go)
+    * [Docs](#docs)
+    * [Video](#video)
+    * [Blog](#blog)
+* [JS](#js)
+* [Docs](#docs)
+    * [React](#react)
+        * [Docs](#docs)
+    * [Vue](#vue)
+        * [Video](#video)
+* [Git && GitHub](#git-amp-amp-github)
+    * [Docs](#docs)
+* [Linux](#linux)
+    * [Docs](#docs)
+* [Macos](#macos)
+    * [Docs](#docs)
+* [Cheets](#cheets)
+* [Algo && Leetcode](#algo-amp-amp-leetcode)
+    * [Docs](#docs)
+    * [Video](#video)
 
 <!-- vim-markdown-toc -->
 
@@ -155,3 +158,19 @@ title: "优质资源收集"
 # Cheets
 
 - [Apply best practices via CheatSheets](https://github.com/dennyzhang/cheatsheet.dennyzhang.com)
+
+# Algo && Leetcode
+
+## Docs
+
+- [ ] [labuladong 的算法小抄](https://labuladong.gitbook.io/algo/)
+- [ ] [数据结构与算法之美](https://time.geekbang.org/column/article/41013)
+- [x] [基础数据结构和算法](https://laisky.com/p/algorithm/)
+- [ ] [编程竞赛](https://oi-wiki.org/)
+- [ ] [Huahua's Tech Road](https://zxi.mytechroad.com/blog/)
+- [ ] [happygirlzt](https://happygirlzt.com/codelist.html)
+
+## Video
+
+- [HuaHua](https://www.youtube.com/user/xxfflower)
+- [happygirllhz](https://www.youtube.com/channel/UCamg61pfZpRnTp5-L4XEM1Q)
