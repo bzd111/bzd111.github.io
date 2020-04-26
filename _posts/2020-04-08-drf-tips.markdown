@@ -17,8 +17,14 @@ title: "[持续更新]drf tips"
 
 ## drf serializers.DateTimeField 字段设置时区和展示形式
 
-serializers.DateTimeField 总共有 3 个参数，format,input_formats,default_timezone
-分别表示格式化的样式，输入格式化的样式，默认时区。其中 format 比较好理解，一般可以设置为`%Y-%m-%d %H:%M:%S`
+serializers.DateTimeField 总共有 3 个参数，
+
+format,input_formats,default_timezone
+
+分别表示格式化的样式，输入格式化的样式，默认时区。
+
+其中 format 比较好理解，一般可以设置为`%Y-%m-%d %H:%M:%S`
+
 default_timezone 是一个 pytz.timezone 对象
 
 ```python3
@@ -38,6 +44,10 @@ start_time = serializers.DateTimeField(
 在 web 开发中，经常会需要获取当天的数据
 
 ```
+from datetime import datetime
+from datetime import time
+from datetime import timedelta
+
 from django.utils import timezone
 from django.utils.timezone import make_aware
 
