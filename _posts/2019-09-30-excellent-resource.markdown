@@ -16,6 +16,10 @@ title: "优质资源收集"
     * [Docs](#docs)
     * [Video](#video)
     * [Blog](#blog)
+* [Rust](#rust)
+    * [Docs](#docs)
+* [C++](#c)
+    * [Docs](#docs)
 * [JS](#js)
 * [Docs](#docs)
     * [React](#react)
@@ -26,6 +30,9 @@ title: "优质资源收集"
     * [Docs](#docs)
 * [Linux](#linux)
     * [Docs](#docs)
+* [K8S](#k8s)
+    * [Dcs](#dcs)
+    * [Project](#project)
 * [Macos](#macos)
     * [Docs](#docs)
 * [Cheets](#cheets)
@@ -114,6 +121,19 @@ title: "优质资源收集"
 - [面向信仰编程](https://draveness.me/)
 - [飞雪无情的博客](https://www.flysnow.org/)
 
+# Rust
+
+## Docs
+
+- [ ] [the rust programming language](https://doc.rust-lang.org/book/title-page.html)
+- [ ] [rustlings](https://github.com/rust-lang/rustlings)
+
+# C++
+
+## Docs
+
+- [ ] [oi-wiki 语言基础](https://oi-wiki.org/lang/)
+
 # JS
 
 # Docs
@@ -149,6 +169,17 @@ title: "优质资源收集"
 
 - [x] [Linux Tools Quick Tutorial](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html)
 
+# K8S
+
+## Dcs
+
+- [x] [kubernetes](https://draveness.me/tags/kubernetes)
+- [ ] [K8S 训练营](https://www.qikqiak.com/k8strain/)
+
+## Project
+
+- [kubernetes-sig](https://github.com/kubernetes-sigs)
+
 # Macos
 
 ## Docs
@@ -169,6 +200,7 @@ title: "优质资源收集"
 - [ ] [编程竞赛](https://oi-wiki.org/)
 - [ ] [Huahua's Tech Road](https://zxi.mytechroad.com/blog/)
 - [ ] [happygirlzt](https://happygirlzt.com/codelist.html)
+- [ ] [LeetCode Cookbook](https://books.halfrost.com/leetcode/)
 
 ## Video
 
