@@ -18,6 +18,6 @@ title: "fullstackopen 笔记总览"
 
 # 系列
 
-- [Part0 Web 应用的基础设施](https://bzd111.me/2020/12/08/fullstackopen-2020.markdown-zero.html)
+- [Part0 Web 应用的基础设施](https://bzd111.me/2020/12/08/fullstackopen-2020-zero.html)
 - [Part1 React 入门](https://bzd111.me/2020/12/08/fullstackopen-2020.markdown-one.html)
 - [Part2 与服务端通信](https://bzd111.me/2020/12/08/fullstackopen-2020.markdown-two.html)
