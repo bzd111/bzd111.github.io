@@ -1,4 +1,16 @@
-# 前言
+---
+layout: post
+title: "Fullstackopen 2020 Part1 笔记"
+---
+
+<!-- vim-markdown-toc Redcarpet -->
+
+* [Part 1](#part-1)
+    * [React 函数组件](#react-函数组件)
+    * [state hook](#state-hook)
+    * [debug](#debug)
+
+<!-- vim-markdown-toc -->
 
 # Part 1
 
