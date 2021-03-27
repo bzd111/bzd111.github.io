@@ -1,3 +1,32 @@
+---
+layout: post
+title: "数据结构之树"
+---
+
+<!-- vim-markdown-toc Redcarpet -->
+
+* [前言](#前言)
+* [Define Binary Tree Node](#define-binary-tree-node)
+* [Create a Binary tree](#create-a-binary-tree)
+    * [Pre-order 前序遍历](#pre-order-前序遍历)
+    * [In-order 中序遍历](#in-order-中序遍历)
+    * [Post-order 后续遍历](#post-order-后续遍历)
+* [Binary search Tree](#binary-search-tree)
+    * [Time Complexity](#time-complexity)
+    * [How to create BST](#how-to-create-bst)
+* [Balanced binary tree](#balanced-binary-tree)
+* [Key to tree problems: recursion](#key-to-tree-problems-recursion)
+    * [Traditional Way](#traditional-way)
+    * [Recursive way](#recursive-way)
+* [Templates](#templates)
+    * [Single root](#single-root)
+        * [Exercise](#exercise)
+    * [Two roots](#two-roots)
+        * [Exercise](#exercise)
+* [Reference](#reference)
+
+<!-- vim-markdown-toc -->
+
 # 前言
 
 [笔记](https://www.youtube.com/watch?v=PbGl8_-bZxI&list=WL&index=38)，感觉 up 主分享。代码都是用 golang 实现。

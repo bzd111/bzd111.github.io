@@ -5,13 +5,14 @@ title: kube多config管理
 
 <!-- vim-markdown-toc Redcarpet -->
 
-- [前言](#前言)
-- [kubeconfig](#kubeconfig)
-- [工具](#工具)
-  - [kconf](#kconf)
-  - [kubectx&&kubens](#kubectx-amp-amp-kubens)
-  - [kube-ps1](#kube-ps1)
-- [使用](#使用)
+* [前言](#前言)
+* [kubeconfig](#kubeconfig)
+* [工具](#工具)
+    * [kconf](#kconf)
+    * [kubectx&&kubens](#kubectx-amp-amp-kubens)
+    * [kube-ps1](#kube-ps1)
+    * [kubecolor](#kubecolor)
+* [使用](#使用)
 
 <!-- vim-markdown-toc -->
 
@@ -53,6 +54,24 @@ kube-ps1 用来展示当前的 context 和 namespace
 kubeon 开启
 
 kubeoff -g 全局关闭
+
+## [kubecolor](https://github.com/dty1er/kubecolor)
+
+能让输出变得有颜色
+
+安装方法
+
+```
+brew install dty1er/tap/kubecolor
+```
+
+设置别名
+
+```
+alias kubectl="kubecolor"
+```
+
+![kubecolor](https://user-images.githubusercontent.com/60682957/95733375-04929680-0cbd-11eb-82f3-adbcfecf4a3e.png)
 
 # 使用
 
