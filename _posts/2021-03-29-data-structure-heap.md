@@ -114,6 +114,7 @@ func (h *MinHeap) heapifyDown(index int) {
 ```
 
 NewMinHeapFromSlice(data []int) // create a heap from a slice.
+
 对数组前一半的元素进行 heapifyDown，即可得到。
 
 ```golang
@@ -131,8 +132,11 @@ func NewMinHeapFromSlice(data []int) *MinHeap {
 ## 应用
 
 Heapsort O(nlogn)
+
 Dijkstra's algorithm
+
 Priority Queue
+
 Selection algorithm
 
 - select top k elements among n
