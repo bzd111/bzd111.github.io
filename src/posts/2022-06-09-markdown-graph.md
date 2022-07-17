@@ -1,6 +1,6 @@
 ---
 date: "2022-06-09"
-slug: "/blog/2022-06-09-markdown-graph"
+slug: "/2022-06-09-markdown-graph"
 layout: post
 title: "画图"
 tags: ["markdown", "graph"]
