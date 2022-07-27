@@ -39,7 +39,8 @@ tags: ["shell", "cli"]
 # 方便记忆
 
 图片来自[推特](https://twitter.com/xxByte/status/1210921646367875072)
-![卡片](/assets/keys.jpg)
+
+![卡片](https://s3.bzd111.me/cli.jpeg)
 
 # Iterm2 使用 Alt 配置
 
