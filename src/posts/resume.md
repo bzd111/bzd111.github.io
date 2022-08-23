@@ -12,7 +12,7 @@ tags: ["resume"]
 
 # 个人评价
 
-1. Vimer、Pythonisa、Golanger，具备良好沟通、协作、学习能力，能够主动在项目中承担起责任
+1. Vimer、Pythonista、Gopher，具备良好沟通、协作、学习能力，能够主动在项目中承担起责任
 2. 关注前沿技术(云原生、DevOps 等)，拥抱开源。
 3. 有较强的 TroubleShooting 能力，工作认真负责。
 
