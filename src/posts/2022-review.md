@@ -1,8 +1,8 @@
 ---
-date: "2022-01-29"
+date: "2023-01-29"
 layout: post
 title: "2022总结"
-slug: "2020-review "
+slug: "2022-review "
 tags: ["总结"]
 --- 
 
