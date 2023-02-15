@@ -2,6 +2,7 @@
 date: "2022-01-29"
 layout: post
 title: "2022总结"
+slug: "2020-review "
 tags: ["总结"]
 --- 
 
