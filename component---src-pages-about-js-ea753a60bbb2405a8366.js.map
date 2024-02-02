@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-about-js-ea753a60bbb2405a8366.js","mappings":"0NAEe,SAASA,IACtB,OAAO","sources":["webpack://gatsby-example-using-markdown-pages/./src/pages/about.js"],"sourcesContent":["import * as React from \"react\"\n\nexport default function About() {\n  return <div>About me</div>\n}"],"names":["About"],"sourceRoot":""}
