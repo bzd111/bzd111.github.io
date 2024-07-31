@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_example_using_markdown_pages=self.webpackChunkgatsby_example_using_markdown_pages||[]).push([[682],{5465:function(e,n,u){u.r(n),u.d(n,{default:function(){return t}});var a=u(7294);function t(){return a.createElement("div",null,"About me")}}}]);
+//# sourceMappingURL=component---src-pages-about-js-ea753a60bbb2405a8366.js.map
