@@ -7,7 +7,7 @@ tags: ["resume"]
 
 # 个人信息
 
-- 技术博客：[https://bzd111.me](https://bzd111.me)
+- 技术博客：[https://bzd111.xyz](https://bzd111.xyz)
 - 期望职位：云原生开发工程师
 
 # 个人评价
@@ -18,10 +18,11 @@ tags: ["resume"]
 
 ## 联系方式
 
-- Email：zxc@bzd111.me
+- Email：1240450484zxc@gmail.com
 
 # 工作经历
 
+- 杭州奇盾信息科技有限公司(2022 年 9 月 ~ 至今) 云原生开发工程师(研发经理)
 - 杭州石原子科技有限公司(2022 年 4 月 ~ 2022 年 8 月) 云原生开发工程师
 - 杭州有赞科技(2021 年 5 月 ~ 2022 年 3 月) 高级运维开发工程师
 - 杭州趣维科技有限公司(2019 年 4 月 ~ 2021 年 5 月) 高级运维开发工程师
@@ -29,6 +30,13 @@ tags: ["resume"]
 - 杭州优云软件有限公司(2016 年 8 月 ~ 2018 年 6 月) Python 开发工程师
 
 # 项目经历
+
+## CNAPP(杭州奇盾信息科技)
+
+- 组织架构开发工作管理
+- 微服务开发
+- k8s 集群部署和管理
+- 运维监控搭建和管理
 
 ## Cluster Operator(杭州石原子公司)
 
@@ -85,9 +93,9 @@ tags: ["resume"]
 
 # 技能清单
 
-1. 熟悉 Python/Golang，能独立开发 Web 服务(Django/Flask/Gin)，了解 RESTFul API/Graphql/gRPC 等请求方式，及 DDD 的开发理念
+1. 熟悉 Python/Golang，能独立开发 Web 服务(Django/Flask/Gin/go zero)，了解 RESTFul API/Graphql/gRPC 等请求方式，及 DDD 的开发理念
 2. 能独立开发、部署前端项目(React、Antd)
-3. 了解 MySQL、Redis、NSQ、FDB 等使用
+3. 了解 MySQL、Redis、NSQ、FDB、ES、kafka 等使用
 4. 熟悉 AWS、AliYun、腾讯云等云厂商产品，能独立部署 k8s 集群环境、提供对外访问、日志采集、指标监控、自动扩缩容等能力。
 5. 拥有 Akamai Web Performance Foundations 证书，能独立配置 akamai cdn 加速。
 6. 熟悉 k8s 操作，能独立开发 Promethus Exporter、Admission Webhook、CRD、Operator 等
