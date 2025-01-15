@@ -2,7 +2,7 @@
 layout: post
 title:  "ant design的modal中使用多个form表单"
 date:   2019-09-22 11:34:52 +0800
-tags: antd modal form
+tags: ["react", "ant design"]
 slug: "2019-09-22-ant-design的modal中使用多个form表单"
 ---
 
