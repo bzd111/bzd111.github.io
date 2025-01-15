@@ -1,0 +1,81 @@
+---
+layout: post
+title: "[持续更新]drf tips"
+date: "2020-04-08"
+tags: ["drf"]
+slug: "2020-04-08-drf-tips"
+---
+
+<!-- vim-markdown-toc Redcarpet -->
+
+* [前言](#前言)
+    * [drf serializers.DateTimeField 字段设置时区和展示形式](#drf-serializers-datetimefield-字段设置时区和展示形式)
+    * [获取相对时间](#获取相对时间)
+    * [调用自定义命令行](#调用自定义命令行)
+* [Reference](#reference)
+
+<!-- vim-markdown-toc -->
+
+# 前言
+
+## drf serializers.DateTimeField 字段设置时区和展示形式
+
+serializers.DateTimeField 总共有 3 个参数，
+
+format,input_formats,default_timezone
+
+分别表示格式化的样式，输入格式化的样式，默认时区。
+
+其中 format 比较好理解，一般可以设置为`%Y-%m-%d %H:%M:%S`
+
+default_timezone 是一个 pytz.timezone 对象
+
+```python3
+import pytz
+from rest_framework import serializers
+
+start_time = serializers.DateTimeField(
+        format='%Y-%m-%d %H:%M:%S', default_timezone=pytz.timezone('Asia/Shanghai')
+    )
+
+```
+
+提一嘴，format 是在 to_representation 使用的，input_formats 是在 to_internal_value 时使用
+
+## 获取相对时间
+
+在 web 开发中，经常会需要获取当天的数据
+
+```
+from datetime import datetime
+from datetime import time
+from datetime import timedelta
+
+from django.utils import timezone
+from django.utils.timezone import make_aware
+
+
+today = timezone.now()
+tomorrow = today + timedelta(1)
+today_start = make_aware(datetime.combine(today, time()))
+today_end = make_aware(datetime.combine(tomorrow, time()))
+```
+
+## 调用自定义命令行
+
+除了使用命令行调用，还可以使用函数去调用
+
+```
+from django.core.management import call_command
+
+
+call_command("command_name", )
+```
+
+# Reference
+
+- https://books.agiliq.com/projects/django-orm-cookbook/en/latest/
+- https://books.agiliq.com/projects/django-api-polls-tutorial/en/latest/
+- https://books.agiliq.com/projects/django-admin-cookbook/en/latest/
+- https://books.agiliq.com/projects/django-multi-tenant/en/latest/
+- https://blog.ansheng.me/article/django-model-qa

@@ -1,0 +1,323 @@
+---
+layout: post
+title: "[笔记]k8s学习笔记"
+date: "2020-07-01"
+tags: ["k8s"]
+slug: "2020-07-01-k8s-keynote"
+---
+
+<!-- vim-markdown-toc Redcarpet -->
+
+- [前言](#前言)
+- [容器与镜像](#容器与镜像)
+- [K8s 概念](#k8s-概念)
+  - [Master](#master)
+  - [Node](#node)
+    - [名词解析](#名词解析)
+    - [常用操作](#常用操作)
+  - [核心概念](#核心概念)
+    - [Pod](#pod)
+      - [常用操作](#常用操作)
+      - [代码](#代码)
+    - [Volume](#volume)
+      - [代码](#代码)
+    - [Deployment](#deployment)
+      - [代码](#代码)
+    - [Service](#service)
+      - [代码](#代码)
+    - [Namespace](#namespace)
+- [Reference](#reference)
+
+<!-- vim-markdown-toc -->
+
+# 前言
+
+阿里云云原生技术公开课笔记和深入剖析 Kubernetes 笔记笔记
+
+# 容器与镜像
+
+容器是一个视图隔离、资源可限制、独立文件系统的进程集合
+
+镜像是容器运行时所需要的所有的文件集合称之为容器。
+
+Namespace 技术来实现进程在资源的视图上进行隔离,分离进程树、网络接口、挂载点以及进程间通信等资源的方法
+
+Cgroup 来限制其资源使用率,CPU 以及内存量
+
+UnionFS 为 Linux 操作系统设计的用于把多个文件系统『联合』到同一个挂载点的文件系统服务
+
+# K8s 概念
+
+## Master
+
+- API Server：顾名思义是用来处理 API 操作的，Kubernetes 中所有的组件都会和 API Server 进行连接，组件与组件之间一般不进行独立的连接，都依赖于 API Server 进行消息的传送；
+
+- Controller：是控制器，它用来完成对集群状态的一些管理。按照用户的期望状态在后台不断地调节整个集群中的对象，当服务的状态发生了改变，控制器就会发现这个改变并且开始向目标状态迁移；
+
+- Scheduler：是调度器，“调度器”顾名思义就是完成调度的操作，对提交的 Pod，依据它对 CPU、对 memory 请求大小，找一台合适的节点，会在每次需要调度 Pod 时执行；
+
+- etcd：是一个分布式的一个存储系统，API Server 中所需要的这些原信息都被放置在 etcd 中，etcd 本身是一个高可用系统，通过 raft 实现分布式一致性，通过 etcd 保证整个 Kubernetes 的 Master 组件的高可用性。
+
+## Node
+
+### 名词解析
+
+- kubelet：周期性地从 API Server 接受新的或者修改的 Pod 规范，调用 Container runtime，来真正去启动配置这个容器和这个容器的运行环境，去调度 Storage Plugin 来去配置存储，network Plugin 去配置网络, 真正去运行这些 Pod 的组件
+
+- Kube-proxy：利用 iptable 的能力来进行组建 Kubernetes 的 Network，在多个隔离的网络中把请求转发给正确的 Pod 或者容器
+
+- Storage Plugin:
+
+- Network Plugin:
+
+### 常用操作
+
+```
+# 获取所有Node
+k get node
+```
+
+## 核心概念
+
+### Pod
+
+Pod 是 Kubernetes 的一个最小调度以及资源单元,包含一个或多个容器，共享同一个网络环境。
+
+Pod Sandbox 是用来创建网络，
+
+EphemeralContainers 临时容器用来调试
+
+InitContainers 是当前 Pod 启动时需要首先执行的一系列容器，在容器启动时进行一些资源和依赖的初始化配置
+
+NormalContainers 是用户定义的容器
+
+容器启动过程：CreateContainer -> PreStart -> StartContainer -> PostStart
+
+容器停止过程：PreStop -> StopContainer -> PostStop
+
+#### 常用操作
+
+```
+# 获取所有pod
+k get pod
+
+# 获取对应namespace下的pod
+k get pod -n namespace
+```
+
+#### 代码
+
+```golang
+type Pod struct {
+	metav1.TypeMeta `json:",inline"`
+	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
+	Spec PodSpec `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
+	Status PodStatus `json:"status,omitempty" protobuf:"bytes,3,opt,name=status"`
+}
+
+type PodSpec struct {
+	InitContainers []Container `json:"initContainers,omitempty" patchStrategy:"merge" patchMergeKey:"name" protobuf:"bytes,20,rep,name=initContainers"`
+	Containers []Container `json:"containers" patchStrategy:"merge" patchMergeKey:"name" protobuf:"bytes,2,rep,name=containers"`
+	RestartPolicy RestartPolicy `json:"restartPolicy,omitempty" protobuf:"bytes,3,opt,name=restartPolicy,casttype=RestartPolicy"`
+	// ...
+}
+
+type PodStatus struct {
+	Phase PodPhase `json:"phase,omitempty" protobuf:"bytes,1,opt,name=phase,casttype=PodPhase"`
+	Conditions []PodCondition `json:"conditions,omitempty" patchStrategy:"merge" patchMergeKey:"type" protobuf:"bytes,2,rep,name=conditions"`
+	Message string `json:"message,omitempty" protobuf:"bytes,3,opt,name=message"`
+	Reason string `json:"reason,omitempty" protobuf:"bytes,4,opt,name=reason"`
+	HostIP string `json:"hostIP,omitempty" protobuf:"bytes,5,opt,name=hostIP"`
+	PodIP string `json:"podIP,omitempty" protobuf:"bytes,6,opt,name=podIP"`
+	StartTime *metav1.Time `json:"startTime,omitempty" protobuf:"bytes,7,opt,name=startTime"`
+	InitContainerStatuses []ContainerStatus `json:"initContainerStatuses,omitempty" protobuf:"bytes,10,rep,name=initContainerStatuses"`
+	ContainerStatuses []ContainerStatus `json:"containerStatuses,omitempty" protobuf:"bytes,8,rep,name=containerStatuses"`
+	// ...
+}
+
+// https://github.com/kubernetes/kubernetes/blob/5ed7b1afb8958fe0d5ddd3660582add89ab9a372/pkg/kubelet/kuberuntime/kuberuntime_manager.go#L644
+// SyncPod syncs the running pod into the desired pod by executing following steps:
+//
+//  1. Compute sandbox and container changes.
+//  2. Kill pod sandbox if necessary.
+//  3. Kill any containers that should not be running.
+//  4. Create sandbox if necessary.
+//  5. Create ephemeral containers.
+//  6. Create init containers.
+//  7. Create normal containers.
+func (m *kubeGenericRuntimeManager) SyncPod(pod *v1.Pod, podStatus *kubecontainer.PodStatus, pullSecrets []v1.Secret, backOff *flowcontrol.Backoff) (result kubecontainer.PodSyncResult) {
+
+}
+
+```
+
+### Volume
+
+用来声明在 Pod 中的容器可以访问文件目录的，一个卷可以被挂载在 Pod 中一个或者多个容器的指定路径下面。
+
+通用挂载步骤：附着（Attach）、挂载（Mount）、卸载（Unmount）和分离（Detach）
+
+临时卷：常用的有 emptydir/hostpath, secret/configmap (用卷的形式挂载在容器中)，只需要 Mount 和 Unmount
+
+EmptyDir 类型的卷多个容器之间共享文件、充当缓存或者保留一些临时的日志 EmptyDir 类型的卷
+
+持久卷：PV 各家云厂商提供的云存储
+
+管理员定义 PV(PersistentVolume)，用户定义 PVC(PersistentVolumeClaim)，
+静态 Provisioning， PV 和 PVC 通过定义的 accessmode 和 stroage 的大小进行匹配，PV 需要提前创建好
+动态 Provisioning，PV 和 PVC 通过 StorageClass 进行绑定
+
+三种访问模式：
+
+- ReadWriteOnce 表示当前卷可以被一个节点使用读写模式挂载；
+- ReadOnlyMany 表示当前卷可以被多个节点使用只读模式挂载；
+- ReadWriteMany 表示当前卷可以被多个节点使用读写模式挂载；
+
+三种回收策略：
+
+- Retain 回收
+- Delete 删除
+- Dynamic Provisioning
+
+VolumeManager 负责卷的创建和管理的大部分工作，
+AttachDetachController 主要负责对集群中的卷进行 Attach 和 Detach，
+PVController 负责处理持久卷的变更
+
+DesiredStateOfWorldPopulator 负责更新节点的期望状态 DesiredStateOfWorld 生成数据
+Reconciler 负责对当前节点上的 Volume 进行管理 从 ActualStateOfWorld 获取数据
+
+#### 代码
+
+```golang
+func (dswp *desiredStateOfWorldPopulator) populatorLoop() {
+     dswp.findAndAddNewPods() // add volume
+
+    // findAndRemoveDeletedPods() calls out to the container runtime to
+    // determine if the containers for a given pod are terminated. This is
+    // an expensive operation, therefore we limit the rate that
+    // findAndRemoveDeletedPods() is called independently of the main
+    // populator loop.
+    if time.Since(dswp.timeOfLastGetPodStatus) < dswp.getPodStatusRetryDuration {
+        klog.V(5).Infof(
+            "Skipping findAndRemoveDeletedPods(). Not permitted until %v (getPodStatusRetryDuration %v).",
+            dswp.timeOfLastGetPodStatus.Add(dswp.getPodStatusRetryDuration),
+            dswp.getPodStatusRetryDuration)
+
+        return
+    }
+
+    dswp.findAndRemoveDeletedPods() // remove volume
+}
+```
+
+### Deployment
+
+Deployment 是在 Pod 这个抽象上更为上层的一个抽象，通常会创建 ReplicaSet 和 Pod
+
+Deployment 主要三个方法，sync(同步)、recreate(重新部署)、RollingUpdate(滚动更新)
+
+依赖关系
+
+```
+Deployment-.->ReplicaSet
+ReplicaSet-.->Pod1
+ReplicaSet-.->Pod2
+ReplicaSet-.->Pod3
+```
+
+DeploymentController 通过 Informer 监控 Pod、ReplicaSet 和 Deployment 的变动，
+
+```
+DI[DeploymentInformer]-. Add/Update/Delete .->DC[DeploymentController]
+ReplicaSetInformer-. Add/Update/Delete .->DC
+PodInformer-. Delete .->DC
+```
+
+- maxUnavailable 表示在更新过程中能够进入不可用状态的 Pod 的最大值；
+- maxSurge 表示能够额外创建的 Pod 个数；
+
+#### 代码
+
+```golang
+func (dc *DeploymentController) syncDeployment(key string) error {
+	namespace, name, _ := cache.SplitMetaNamespaceKey(key)
+	deployment, _ := dc.dLister.Deployments(namespace).Get(name)
+
+	d := deployment.DeepCopy()
+
+	rsList, _ := dc.getReplicaSetsForDeployment(d)
+	podMap, _ := dc.getPodMapForDeployment(d, rsList)
+
+	dc.checkPausedConditions(d)
+
+	if d.Spec.Paused {
+		return dc.sync(d, rsList)
+	}
+
+	scalingEvent, _ := dc.isScalingEvent(d, rsList)
+	if scalingEvent {
+		return dc.sync(d, rsList)
+	}
+
+	switch d.Spec.Strategy.Type {
+	case apps.RecreateDeploymentStrategyType:
+		return dc.rolloutRecreate(d, rsList, podMap)
+	case apps.RollingUpdateDeploymentStrategyType:
+		return dc.rolloutRolling(d, rsList)
+	}
+	return fmt.Errorf("unexpected deployment strategy type: %s", d.Spec.Strategy.Type)
+}
+```
+
+### Service
+
+Service 提供了一个或者多个 Pod 实例的稳定访问地址。控制器创建 Endpoint 对象，kube-proxy 变更 iptables 或者 ipvs 的规则
+
+EndpointController 的作用，订阅 Pod 和 Service 对象的变更，并根据当前集群中的对象生成 Endpoint 对象将两者进行关联
+
+IPVS > IPTABLES > USERSPACE
+
+ipvs 支持负载均衡，使用哈希表进行底层数据存储
+
+#### 代码
+
+```golang
+type Service struct {
+	metav1.TypeMeta `json:",inline"`
+	metav1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
+	Spec ServiceSpec `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
+	Status ServiceStatus `json:"status,omitempty" protobuf:"bytes,3,opt,name=status"`
+}
+
+type ServiceSpec struct {
+	Ports []ServicePort `json:"ports,omitempty" patchStrategy:"merge" patchMergeKey:"port" protobuf:"bytes,1,rep,name=ports"`
+	Selector map[string]string `json:"selector,omitempty" protobuf:"bytes,2,rep,name=selector"`
+	// ...
+}
+
+type ServiceStatus struct {
+	LoadBalancer LoadBalancerStatus `json:"loadBalancer,omitempty" protobuf:"bytes,1,opt,name=loadBalancer"`
+}
+
+type LoadBalancerStatus struct {
+	Ingress []LoadBalancerIngress `json:"ingress,omitempty" protobuf:"bytes,1,rep,name=ingress"`
+}
+
+type LoadBalancerIngress struct {
+	IP string `json:"ip,omitempty" protobuf:"bytes,1,opt,name=ip"`
+	Hostname string `json:"hostname,omitempty" protobuf:"bytes,2,opt,name=hostname"`
+}
+
+
+```
+
+https://stackoverflow.com/questions/41509439/whats-the-difference-between-clusterip-nodeport-and-loadbalancer-service-types
+
+### Namespace
+
+Namespace 是用来做一个集群内部的逻辑隔离的，它包括鉴权、资源管理等。
+
+# Reference
+
+- https://edu.aliyun.com/roadmap/cloudnative
+- https://draveness.me/tags/kubernetes

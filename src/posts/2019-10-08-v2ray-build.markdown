@@ -1,0 +1,75 @@
+---
+layout: post
+title: "v2ray搭建"
+date: "2019-10-08"
+tags: ["v2ray"]
+slug: "2019-10-08-v2ray-build"
+---
+
+<!-- vim-markdown-toc Redcarpet -->
+* [v2ray 安装使用](#v2ray-安装使用)
+    * [一键安装，简单使用](#一键安装，简单使用)
+        * [安装命令](#安装命令)
+        * [修改配置](#修改配置)
+    * [更进一步](#更进一步)
+* [手动搭建](#手动搭建)
+    * [v2ray + ws + cdn + 域名 + https + nginx](#v2ray-ws-cdn-域名-https-nginx)
+* [总结](#总结)
+
+<!-- vim-markdown-toc -->
+
+# v2ray 安装使用
+
+## 一键安装，简单使用
+
+这里分享一个，我贡献过的基于 Web 的 V2ray 控制面板。
+
+### 安装命令
+
+`wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/V2ray.Fun/master/install.sh && bash install.sh`
+这里会要求输入一些用户名、登陆密码、端口号等，这些都是用来登陆管理系统的。
+
+### 修改配置
+
+在浏览器打开http://127.0.0.1:port(前面输入的端口)，然后输入用户名、密码，就可以登陆，然后可以看到如下的图片了。
+![test](/assets/v2ray.png)
+然后就可以进行玩耍了。
+
+## 更进一步
+
+可以使用 acme 生成证书
+
+使用 ws 进行通信
+
+使用 nginx 隐藏 v2ray 请求路径
+
+使用 cdn 隐藏 vps 的 IP，其实被墙了，也可以用
+
+由于我的 vps 无法使用 acme，最后选择了 cloudflare 生成了证书
+
+# 手动搭建
+
+由于不太信任一键启动的脚本，所以选择徒手搭建
+
+## v2ray + ws + cdn + 域名 + https + nginx
+
+首先需要一个域名，可以在 godaddy 上购买一个，购买步骤就不赘述了。
+
+其次需要注册一个 cloudflare 的账号，
+
+安装 nginx、v2ray 都很简单，
+
+最后是进行配置
+
+```
+Todo 配置
+粘贴
+```
+
+# 总结
+
+一般情况下，第一种安装方法已经够用了，非常时期才需要用到第二种。
+
+最简单、省钱的方案是申请一个 gcp，然后使用第一种方案，就足够使用了。
+
+都是为了更好的查资料，不是要干什么坏事 🐶

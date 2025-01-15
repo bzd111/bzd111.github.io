@@ -1,0 +1,74 @@
+---
+layout: post
+title: "2020总结"
+date: "2021-01-05"
+tags: ["summary"]
+slug: "2021-01-05-2020-review"
+---
+
+# 前言
+
+成功的人都会写总结，而我只能假装成功。
+
+# 工作
+
+由于公司人员流动，工作重心从 dev 偏向 ops。玩了玩 aliyun、aws
+的云产品，后续应该还会对接更多云，如腾讯云、oracle、gcp 等。
+
+优化了公司的 CICD，结合飞书、jenkins、k8s，全自动发布全球 5 大区。
+
+多云运维平台建设、维护
+
+## 2021 重点
+
+- 多云环境下想学习推广下 terraform，
+- helmfile 整合冗余的配置文件
+
+# 生活
+
+生活中经历了结婚、买房，压力顿时大了起来，担子更重了。
+
+# 开源
+
+提了几个 PR，更多的是 clone 别人的代码进行学习。
+
+# Blog
+
+写了 23 篇 blog，算是自己的备忘录吧。还有很多草稿文章没有发布，执行力不够 😭
+
+# 学习
+
+看了一些书，写了笔记，放到 blog，距离订的目标(每月一本)没到
+
+关注一些 blog，看了些教程
+
+- https://github.com/quii/learn-go-with-tests
+- https://draveness.me/golang/
+- https://draveness.me/tags/kubernetes
+- https://fullstackopen.com/
+
+## 看完的书
+
+《Kubernets 进阶实战》
+《Go 语言程序设计》
+《High Performance python 2》
+《Vim 实用技巧》
+
+## 剩下的书
+
+《数据密集型应用系统设计》
+《代码整洁之道》
+《程序员修炼之道第二版》
+《Modern Vim》
+《现代操作系统:原理与实现》
+《BPF 之颠: 洞悉 Linux 系统和设计》
+《数据库系统内幕》
+《深入理解计算机系统》
+
+# 总结
+
+2020 就这么糊里糊涂的过去了
+
+2021 好好学习、天天向上，把以前的草稿补上，争取每天看书 30 分钟，争取先把手边的书单看完。
+
+![books](/assets/books.jpeg)

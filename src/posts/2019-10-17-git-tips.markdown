@@ -1,0 +1,119 @@
+---
+layout: post
+title: "git常用命令"
+date: "2019-10-17"
+tags: ["git"]
+slug: "2019-10-17-git-tips"
+---
+
+<!-- vim-markdown-toc Redcarpet -->
+
+* [前言](#前言)
+* [初始化](#初始化)
+    * [安装 git](#安装-git)
+    * [配置](#配置)
+* [git 命令](#git-命令)
+* [Reference](#reference)
+
+<!-- vim-markdown-toc -->
+
+# 前言
+
+工作这几年，都在用 git，这里准备整理下笔者使用 git 的常用功能。
+git 的工作区域的概念的，这里就不赘述了。
+
+# 初始化
+
+## 安装 git
+
+`brew install git`
+
+## 配置
+
+配置设计.gitconfig、.gitmessage、.gitignore_global，这三个文件
+
+```ini
+[user]
+    name = your-name
+    email = your-email
+[core]
+    editor = vim
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    excludesfile = ~/.gitignore_global
+[color]
+    ui = auto
+[color "branch"]
+    current = yellow bold
+    local = green bold
+    remote = cyan bold
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
+[diff]
+    tool = vimdiff
+[alias]
+    gst = git status
+    gc="git commit -s"
+    gl="git pull --all"
+[difftool]
+    prompt = false
+[includeIf "gitdir:~/Gitlab/"]
+    path = ~/Gitlab/.gitconfig
+[commit]
+    template = ~/.gitmessage
+[pager]
+    branch = false
+```
+
+这里稍微说明下:
+
+[user]定义了用户的信息
+
+[commit]定义了 git commit 的提交信息模版
+
+[includeIf]定义了
+在~/Gitlab/目录下，使用~/Gitlab/.gitconfig 这个配置文件，因为公司的项目要使用公司的 name 和 email 去提交
+
+# git 命令
+
+这里采用 QA 的方式来展示
+
+Q：如果保存 git 账号密码，避免手动输入？
+
+A：git config --global credential.helper store
+
+Q：撤销已在版本库里的文件(修改了发现发错了)
+
+A：单独文件可以使用`git checkout file`，多文件可以使用`git reset --hard`
+
+Q：撤销上次提交，提交未提交到远程仓库
+
+A：git reset --hard HEAD^
+
+Q：撤销已提交到远程仓库的上次提交
+
+A：先执行`git reset HEAD^ --hard`，再执行`git push -f remote branch`
+
+Q：PR 被 merge 后，远程已经删除，现在要把本地对应的分支删除
+
+A：`git fetch -p` 或者 `git branch name -D`
+
+Q：本地分支里没有对应的远程分支，如果生成对应的本地分支？
+
+A：`git pull -all`
+
+Q: 同步 fork 仓库的内容
+
+A：先添加远程仓库 `git remote add upstream https://github.com/users/repository.git`，在 fetch、merge
+
+# Reference
+
+- https://www.git-scm.com/book/zh/v2/
+- https://github.com/k88hudson/git-flight-rules/blob/master/README_zh-CN.md

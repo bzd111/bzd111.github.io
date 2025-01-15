@@ -1,0 +1,161 @@
+---
+layout: post
+title: "es-query使用"
+date: "2020-03-10"
+tags: ["es"]
+slug: "2020-03-10-es-query"
+---
+
+<!-- vim-markdown-toc Redcarpet -->
+
+* [前言](#前言)
+* [ES](#es)
+    * [安装](#安装)
+    * [运行](#运行)
+* [简单使用](#简单使用)
+    * [造数据](#造数据)
+    * [Query](#query)
+        * [BoolQuery](#boolquery)
+        * [MathQuery](#mathquery)
+* [总结](#总结)
+* [Reference](#reference)
+
+<!-- vim-markdown-toc -->
+
+# 前言
+
+最近看到一个库`https://github.com/aquasecurity/esquery/`，在这里简单介绍下
+
+# ES
+
+elasticsearch(简称 es)，才被用来搜索引擎，也常被用来搭建 ELK(Elasticsearch + Logstash + Kibana)
+es 提供了简单的 restful api 去操作。本文重点在于用 go 的第三方包操作 es。
+
+## 安装
+
+在 macos 上安装可以使用以下两条命令
+
+```
+
+brew tap elastic/tap
+
+brew install elastic/tap/elasticsearch-full
+```
+
+## 运行
+
+先启动服务，后运行二进制文件
+
+```
+// 启动服务
+brew services start elastic/tap/elasticsearch-full
+// 运行
+elasticsearch
+```
+
+# 简单使用
+
+先介绍几个 es 的概念，
+index: 索引，相当于 mysql 的数据库
+type(mapping): 文档类型，相当于 mysql 的表
+document: 文档，相当于 mysql 中的行
+field: 文档中的一个字段
+shards: 分片
+replica: 副本
+
+每一个 index，会被拆分到 shards，replica 是用来恢复丢失的 shards
+
+这里安装的是 es7.0，type 默认是\_doc，一个分片、一个副本
+
+## 造数据
+
+这里简单的介绍下 esquery 这个库，看名字就知道它只支持 query。
+
+查询首先要创建一个 es 的客户端，通过官方提供的 go 包
+这里我们使用[HTTPie]{https://httpie.org/}
+
+```
+// 安装HTTPie
+brew install httpie
+
+// 创建index
+http PUT :9200/book
+
+// 创建mapping
+http PUT :9200/book/_mapping properties:='{"tags":{"type":"text"},"publish":{"type":"date"},"title":{"type":"text"}}'
+
+// 创建document
+http POST :9200/book/_doc title="The Go Programming Language" post_date="2015-11-16T" tags="go"
+http POST :9200/book/_doc title="Mastering Go" post_date="2019-08-29T" tags="go"
+http POST :9200/book1/_doc title="fluent python" post_date="2015-07-30T" tags="python code"
+```
+
+## Query
+
+首先需要创建一个 es 客户端，然后通过 esquery 构建一个 Query，然后指定具体的查询类型和查询条件
+
+```golang
+package main
+
+import (
+	"context"
+	"log"
+
+	"github.com/aquasecurity/esquery"
+	"github.com/elastic/go-elasticsearch/v7"
+)
+
+func main() {
+    // connect to an ElasticSearch instance
+	es, err := elasticsearch.NewDefaultClient()
+	if err != nil {
+		log.Fatalf("Failed creating client: %s", err)
+	}
+}
+```
+
+### BoolQuery
+
+```golang
+qRes, err := esquery.Query(
+		esquery.
+			Bool().
+			Must(esquery.Term("title", "go")).
+			Filter(esquery.Term("tag", "go")),
+    ).Run(
+        es,
+		es.Search.WithContext(context.TODO()),
+		es.Search.WithIndex("book"),
+	)
+	if err != nil {
+		log.Fatalf("Failed searching for stuff: %s", err)
+	}
+
+	defer qRes.Body.Close()
+```
+
+### MathQuery
+
+```golang
+qRes, _ := esquery.Query(
+		esquery.
+			Match("title", "go"),
+	).Run(
+		es,
+		es.Search.WithIndex("book"),
+	)
+	defer qRes.Body.Close()
+```
+
+然后可以通过 qRes.String()获取到数据
+
+# 总结
+
+这里只是简单的介绍下 es query，推荐看一下下面的 reference，及官方文档
+
+# Reference
+
+- https://github.com/aquasecurity/esquery/
+- https://laisky.com/p/elasticsearch-quickstart/
+- https://www.elastic.co/guide/cn/elasticsearch/guide/current/index.html
+- https://strconv.com/posts/use-elastic/

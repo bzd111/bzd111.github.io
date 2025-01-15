@@ -1,0 +1,130 @@
+---
+layout: post
+title: "leetcode 215.Kth Largest Element in an Array"
+date: "2019-11-26"
+tags: ["leetcode"]
+slug: "2019-11-26-leetcode-215-kth-largest-element-in-an-array"
+---
+
+<!-- vim-markdown-toc Redcarpet -->
+
+* [前言](#前言)
+    * [解题](#解题)
+        * [python 解法](#python-解法)
+        * [go 解法](#go-解法)
+* [Reference](#reference)
+
+<!-- vim-markdown-toc -->
+
+# 前言
+
+最近刷题刷到[215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)，找到数组中第 k 个最大的元素
+
+## 解题
+
+这个问题可以用[堆](<https://en.wikipedia.org/wiki/Heap_(data_structure)>)解决。堆其实是一棵二叉树，如果根节点大于所有节点，就叫最大堆，反之叫最小堆。
+
+可以用一个公式来表示，a[k]<=a[2*k+1]，a[k]<=a[2*k+2]，即第 k 个元素小于 2*k+1 个和 2*k+2 个，这是最小堆需要满足的条件，把小于改成大于就是最大堆了。
+
+堆常用来排序和实现优先级队列，优先级队列就是只用堆有序的特性实现，可以看到[PriorityQueue 的实现](https://github.com/python/cpython/blob/3f5b9088b0ed08e1442cca37df78f609d5cd8c3c/Lib/queue.py#L220)
+
+### python 解法
+
+python 默认提供[堆](https://github.com/python/cpython/blob/3f5b9088b0ed08e1442cca37df78f609d5cd8c3c/Lib/heapq.py)的数据结构实现
+
+```python
+import heapq
+from typing import List
+
+
+class Solution:
+    def __init__(self) -> None:
+        self.minheap: List[int] = []
+
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        for i in nums:
+            self.push(i)
+        for _ in range(len(nums) - k):
+            heapq.heappop(self.minheap)
+        return heapq.heappop(self.minheap)
+
+    def push(self, val: int) -> None:
+        heapq.heappush(self.minheap, val)
+
+
+if __name__ == "__main__":
+    s = Solution()
+    nums = [3, 2, 1, 5, 6, 4]
+    k = 2
+    print(s.findKthLargest(nums, k))  # 5
+    s = Solution()
+    nums = [3, 2, 3, 1, 2, 4, 5, 5, 6]
+    k = 4
+    print(s.findKthLargest(nums, k))  # 4
+
+```
+
+看源码可以看到 heappush、heappop 之后，会调用\_siftup、\_siftdown，这是用来保持数组有续的。
+其实它实现了最大堆、最小堆，只是最大堆用的下划线开头的函数，表示不想被外部调用。
+
+### go 解法
+
+go 提供了一个 container/heap，只需要实现[Interface](https://golang.org/pkg/sort/#Interface) Len、Swap、Less 这三个接口就可以，
+
+```golang
+package main
+
+import (
+	"container/heap"
+	"fmt"
+)
+
+type MaxHeaq []int
+
+func findKthLargest(nums []int, k int) int {
+	temp := MaxHeaq(nums)
+	h := &temp
+	heap.Init(h)
+	for i := 1; i < k; i++ {
+		heap.Remove(h, 0)
+	}
+	return (*h)[0]
+}
+
+func (h MaxHeaq) Len() int {
+	return len(h)
+}
+
+func (h *MaxHeaq) Push(x interface{}) {
+	*h = append(*h, x.(int))
+}
+
+func (h *MaxHeaq) Pop() interface{} {
+	res := (*h)[len(*h)-1]
+	*h = (*h)[0 : len(*h)-1]
+	return res
+}
+
+func (h MaxHeaq) Less(i, j int) bool {
+        // 最大堆，反之就是最小堆
+	return h[i] > h[j]
+}
+
+func (h MaxHeaq) Swap(i, j int) {
+	h[i], h[j] = h[j], h[i]
+}
+
+func main() {
+	nums := []int{3, 2, 1, 5, 6, 4}
+	k := 2
+	fmt.Println(findKthLargest(nums, k)) // 5
+	nums = []int{3, 2, 3, 1, 2, 4, 5, 5, 6}
+	k = 4
+	fmt.Println(findKthLargest(nums, k)) //4
+}
+```
+
+# Reference
+
+- https://golang.org/pkg/container/heap/
+- https://docs.python.org/3/library/heapq.html
