@@ -2,10 +2,8 @@
 title: "static files to go file"
 date: 2021-02-23
 slug: "2021-02-23-static-files-to-go-file"
-categories:
-	- go
-tags:
-	- go
+tags: [go]
+layout: post
 ---
 
 # 前言

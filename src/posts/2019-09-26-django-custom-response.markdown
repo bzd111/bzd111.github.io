@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "django custom response"
-tags: django custom response
+tags: ["django"]
 slug: "2019-09-26-django-custom-response"
+date: "2019-09-26"
 ---
 
 <!-- vim-markdown-toc GFM -->
