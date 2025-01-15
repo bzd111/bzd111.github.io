@@ -1,26 +1,26 @@
 ---
-date: "2022-06-09"
-slug: "/2022-06-09-markdown-graph"
 layout: post
 title: "画图"
-tags: ["markdown", "graph"]
+date: "2022-06-09"
+tags: ["gitlab"]
+slug: "2022-06-09-markdown-graph"
 ---
 
 <!-- vim-markdown-toc GitLab -->
 
-- [前言](#前言)
-- [Mermaid](#mermaid)
-  - [Flowchart](#flowchart)
-    - [demo](#demo)
-  - [Sequence diagram](#sequence-diagram)
-    - [demo](#demo-1)
-  - [Gantt diagram](#gantt-diagram)
-    - [demo](#demo-2)
-- [PlantUML](#plantuml)
-  - [时序图](#时序图)
-  - [demo](#demo-3)
-- [小结](#小结)
-- [Reference](#reference)
+* [前言](#前言)
+* [Mermaid](#mermaid)
+    * [Flowchart](#flowchart)
+        * [demo](#demo)
+    * [Sequence diagram](#sequence-diagram)
+        * [demo](#demo-1)
+    * [Gantt diagram](#gantt-diagram)
+        * [demo](#demo-2)
+* [PlantUML](#plantuml)
+    * [时序图](#时序图)
+    * [demo](#demo-3)
+* [小结](#小结)
+* [Reference](#reference)
 
 <!-- vim-markdown-toc -->
 

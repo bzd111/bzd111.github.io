@@ -2,8 +2,8 @@
 layout: post
 title: "数据结构之堆"
 date: "2021-03-29"
-slug: "/2021-03-29-data-struct-of-heap"
-tags: ["shell", "cli"]
+tags: ["data-structure"]
+slug: "2021-03-29-data-structure-heap"
 ---
 
 <!-- vim-markdown-toc Redcarpet -->

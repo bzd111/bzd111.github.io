@@ -1,9 +1,9 @@
 ---
-date: "2020-01-20"
-slug: "/2020-01-20-shell-short-cut-key"
 layout: post
 title: "CLI快捷键"
-tags: ["shell", "cli"]
+date: "2020-01-20"
+tags: ["shell"]
+slug: "2020-01-20-shell-short-cut-key"
 ---
 
 <!-- vim-markdown-toc Redcarpet -->
@@ -39,8 +39,7 @@ tags: ["shell", "cli"]
 # 方便记忆
 
 图片来自[推特](https://twitter.com/xxByte/status/1210921646367875072)
-
-![卡片](https://s3.bzd111.me/cli.jpeg)
+![卡片](/assets/keys.jpg)
 
 # Iterm2 使用 Alt 配置
 
