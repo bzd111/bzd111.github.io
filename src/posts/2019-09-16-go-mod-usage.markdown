@@ -2,6 +2,7 @@
 layout: post
 title: "go mod usage"
 date: 2019-09-17 20:49:52 +0800
+slug: "2019-09-17-go-mod-usage"
 tags: ["go", "mod"]
 ---
 
