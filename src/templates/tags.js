@@ -1,82 +1,62 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/layout";
 
-// Components
-import { Link, graphql } from "gatsby"
-
-const Tags = ({ pageContext, data }) => {
-  const { tag } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+const TagsPage = ({ data, pageContext }) => {
+  const { tag } = pageContext;
+  const { edges } = data.allMarkdownRemark;
 
   return (
-    <div>
-      <h1>{tagHeader}</h1>
-      <ul>
-        {edges.map(({ node }) => {
-          const { slug } = node.fields
-          const { title } = node.frontmatter
-          return (
-            <li key={slug}>
-              <Link to={slug}>{title}</Link>
-            </li>
-          )
-        })}
-      </ul>
-      {/*
-              This links to a page that does not yet exist.
-              You'll come back to it!
-            */}
-      <Link to="/tags">All tags</Link>
-    </div>
-  )
-}
+    <Layout>
+      <div className="max-w-7xl mx-auto px-4 pt-20 pb-8 relative">
+        {/* Main Content */}
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold mb-8 text-center">Tag: {tag}</h1>
+          <ul className="space-y-4">
+            {edges.map(({ node }) => (
+              <li key={node.id} className="p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
+                <Link
+                  to={node.fields.slug}
+                  className="text-xl text-blue-600 hover:text-blue-800"
+                >
+                  {node.frontmatter.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-8 text-center">
+            <Link
+              to="/tags"
+              className="inline-block px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+            >
+              All Tags
+            </Link>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+};
 
-Tags.propTypes = {
-  pageContext: PropTypes.shape({
-    tag: PropTypes.string.isRequired,
-  }),
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      totalCount: PropTypes.number.isRequired,
-      edges: PropTypes.arrayOf(
-        PropTypes.shape({
-          node: PropTypes.shape({
-            frontmatter: PropTypes.shape({
-              title: PropTypes.string.isRequired,
-            }),
-            fields: PropTypes.shape({
-              slug: PropTypes.string.isRequired,
-            }),
-          }),
-        }).isRequired
-      ),
-    }),
-  }),
-}
-
-export default Tags
+export default TagsPage;
 
 export const pageQuery = graphql`
   query($tag: String) {
     allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
+      sort: { fields: [frontmatter___date], order: DESC }
     ) {
-      totalCount
       edges {
         node {
-        #   fields {
-        #     slug
-        #   }
+          id
           frontmatter {
             title
+          }
+          fields {
+            slug
           }
         }
       }
     }
   }
-`
+`;

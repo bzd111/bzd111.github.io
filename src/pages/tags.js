@@ -1,70 +1,41 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/layout";
 
-// Utilities
-import kebabCase from "lodash/kebabCase"
+const AllTagsPage = ({ data }) => {
+    const tags = data.allMarkdownRemark.group;
 
-// Components
-import { Helmet } from "react-helmet"
-import { Link, graphql } from "gatsby"
+    return (
+        <Layout>
+            <div className="max-w-4xl mx-auto px-4 py-8">
+                <h1 className="text-4xl font-bold mb-8 text-center">All Tags</h1>
+                <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {tags.map(tag => (
+                        <li key={tag.fieldValue} className="p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
+                            <Link
+                                to={`/tags/${tag.fieldValue}/`}
+                                className="text-lg text-blue-600 hover:text-blue-800"
+                            >
+                                {tag.fieldValue}
+                                <span className="text-gray-600">({tag.totalCount})</span>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </Layout>
+    );
+};
 
-const TagsPage = ({
-  data: {
-    allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
-  },
-}) => (
-  <div>
-    <Helmet title={title} />
-    <div>
-      <h1>Tags</h1>
-      <ul>
-        {group.map(tag => (
-          <li key={tag.fieldValue}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </div>
-)
-
-TagsPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      group: PropTypes.arrayOf(
-        PropTypes.shape({
-          fieldValue: PropTypes.string.isRequired,
-          totalCount: PropTypes.number.isRequired,
-        }).isRequired
-      ),
-    }),
-    site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }),
-    }),
-  }),
-}
-
-export default TagsPage
+export default AllTagsPage;
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(limit: 2000) {
-      group(field: frontmatter___tags) {
+      group(field: { frontmatter: { tags: SELECT } }) {
         fieldValue
         totalCount
       }
     }
   }
-`
+`;
