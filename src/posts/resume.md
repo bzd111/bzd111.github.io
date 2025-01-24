@@ -2,7 +2,6 @@
 slug: "resume"
 layout: post
 title: "resume"
-tags: ["resume"]
 ---
 
 # 个人信息

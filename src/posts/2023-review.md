@@ -3,7 +3,7 @@ date: "2024-02-02"
 layout: post
 title: "2023总结"
 slug: "/2023-review"
-tags: ["总结"]
+tags: ["summary"]
 ---
 
 # 前言
