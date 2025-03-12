@@ -16,6 +16,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -40,7 +41,7 @@ module.exports = {
               className: `toc-anchor`,
               maintainCase: false,
               removeAccents: true,
-              elements: [`h2`, `h3`, `h4`],
+              elements: [`h1`, `h2`, `h3`, `h4`],
             },
           },
           `gatsby-remark-images`,

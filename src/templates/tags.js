@@ -29,7 +29,7 @@ const TagsPage = ({ data, pageContext }) => {
               to="/tags"
               className="inline-block px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
             >
-              All Tags
+              所有标签
             </Link>
           </div>
         </div>

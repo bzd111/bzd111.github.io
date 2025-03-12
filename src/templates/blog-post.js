@@ -26,16 +26,28 @@ const BlogPost = ({ data }) => {
                 __html: post.html
                   .replace(/\\n/g, "")
                   .replace(
-                    /<h1/g,
-                    '<h1 class="text-4xl font-bold mb-4 scroll-mt-20"'
+                    /<h1(?!.*?class=)/g,
+                    '<h1 class="text-4xl font-bold mb-4 scroll-mt-32"'
                   )
                   .replace(
-                    /<h2/g,
-                    '<h2 class="text-3xl font-bold mb-3 scroll-mt-20"'
+                    /<h1 class="([^"]*)"/g,
+                    '<h1 class="$1 text-4xl font-bold mb-4 scroll-mt-32"'
                   )
                   .replace(
-                    /<h3/g,
-                    '<h3 class="text-2xl font-bold mb-2 scroll-mt-20"'
+                    /<h2(?!.*?class=)/g,
+                    '<h2 class="text-3xl font-bold mb-3 scroll-mt-32"'
+                  )
+                  .replace(
+                    /<h2 class="([^"]*)"/g,
+                    '<h2 class="$1 text-3xl font-bold mb-3 scroll-mt-32"'
+                  )
+                  .replace(
+                    /<h3(?!.*?class=)/g,
+                    '<h3 class="text-2xl font-bold mb-2 scroll-mt-32"'
+                  )
+                  .replace(
+                    /<h3 class="([^"]*)"/g,
+                    '<h3 class="$1 text-2xl font-bold mb-2 scroll-mt-32"'
                   ),
               }}
             />

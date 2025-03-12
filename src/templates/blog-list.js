@@ -53,7 +53,7 @@ export default BlogListTemplate;
 export const query = graphql`
   query($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       limit: $limit
       skip: $skip
       filter: { frontmatter: { date: { ne: null } } }
