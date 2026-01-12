@@ -1,0 +1,790 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.14.1"/><style data-href="/styles.91d60bbab44133089581.css" data-identity="gatsby-global-css">*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*
+! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
+*/*,:after,:before{border:0 solid #e5e7eb;box-sizing:border-box}:after,:before{--tw-content:""}:host,html{-webkit-text-size-adjust:100%;font-feature-settings:normal;-webkit-tap-highlight-color:transparent;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-variation-settings:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4}body{line-height:inherit}hr{border-top-width:1px;color:inherit;height:0}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}code,kbd,pre,samp{font-feature-settings:normal;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-variation-settings:normal}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-collapse:collapse;border-color:inherit;text-indent:0}button,input,optgroup,select,textarea{font-feature-settings:inherit;color:inherit;font-family:inherit;font-size:100%;font-variation-settings:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{color:#9ca3af;opacity:1}input::placeholder,textarea::placeholder{color:#9ca3af;opacity:1}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{height:auto;max-width:100%}[hidden]:where(:not([hidden=until-found])){display:none}.prose{color:var(--tw-prose-body);max-width:65ch}.prose :where(p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.25em;margin-top:1.25em}.prose :where([class~=lead]):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-lead);font-size:1.25em;line-height:1.6;margin-bottom:1.2em;margin-top:1.2em}.prose :where(a):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-links);font-weight:500;text-decoration:underline}.prose :where(strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-bold);font-weight:600}.prose :where(a strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.prose :where(blockquote strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.prose :where(thead th strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.prose :where(ol):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:decimal;margin-bottom:1.25em;margin-top:1.25em;padding-inline-start:1.625em}.prose :where(ol[type=A]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-alpha}.prose :where(ol[type=a]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-alpha}.prose :where(ol[type=A s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-alpha}.prose :where(ol[type=a s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-alpha}.prose :where(ol[type=I]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-roman}.prose :where(ol[type=i]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-roman}.prose :where(ol[type=I s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-roman}.prose :where(ol[type=i s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-roman}.prose :where(ol[type="1"]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:decimal}.prose :where(ul):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:disc;margin-bottom:1.25em;margin-top:1.25em;padding-inline-start:1.625em}.prose :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *))::marker{color:var(--tw-prose-counters);font-weight:400}.prose :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *))::marker{color:var(--tw-prose-bullets)}.prose :where(dt):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;margin-top:1.25em}.prose :where(hr):not(:where([class~=not-prose],[class~=not-prose] *)){border-color:var(--tw-prose-hr);border-top-width:1px;margin-bottom:3em;margin-top:3em}.prose :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)){border-inline-start-color:var(--tw-prose-quote-borders);border-inline-start-width:.25rem;color:var(--tw-prose-quotes);font-style:italic;font-weight:500;margin-bottom:1.6em;margin-top:1.6em;padding-inline-start:1em;quotes:"\201C""\201D""\2018""\2019"}.prose :where(blockquote p:first-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:open-quote}.prose :where(blockquote p:last-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:close-quote}.prose :where(h1):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-size:2.25em;font-weight:800;line-height:1.1111111;margin-bottom:.8888889em;margin-top:0}.prose :where(h1 strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-weight:900}.prose :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-size:1.5em;font-weight:700;line-height:1.3333333;margin-bottom:1em;margin-top:2em}.prose :where(h2 strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-weight:800}.prose :where(h3):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-size:1.25em;font-weight:600;line-height:1.6;margin-bottom:.6em;margin-top:1.6em}.prose :where(h3 strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-weight:700}.prose :where(h4):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;line-height:1.5;margin-bottom:.5em;margin-top:1.5em}.prose :where(h4 strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-weight:700}.prose :where(img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:2em;margin-top:2em}.prose :where(picture):not(:where([class~=not-prose],[class~=not-prose] *)){display:block;margin-bottom:2em;margin-top:2em}.prose :where(video):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:2em;margin-top:2em}.prose :where(kbd):not(:where([class~=not-prose],[class~=not-prose] *)){border-radius:.3125rem;box-shadow:0 0 0 1px rgb(var(--tw-prose-kbd-shadows)/10%),0 3px 0 rgb(var(--tw-prose-kbd-shadows)/10%);color:var(--tw-prose-kbd);font-family:inherit;font-size:.875em;font-weight:500;padding-inline-end:.375em;padding-bottom:.1875em;padding-top:.1875em;padding-inline-start:.375em}.prose :where(code):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-code);font-size:.875em;font-weight:600}.prose :where(code):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:"`"}.prose :where(code):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:"`"}.prose :where(a code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.prose :where(h1 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.prose :where(h2 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-size:.875em}.prose :where(h3 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-size:.9em}.prose :where(h4 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.prose :where(blockquote code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.prose :where(thead th code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.prose :where(pre):not(:where([class~=not-prose],[class~=not-prose] *)){background-color:var(--tw-prose-pre-bg);border-radius:.375rem;color:var(--tw-prose-pre-code);font-size:.875em;font-weight:400;line-height:1.7142857;margin-bottom:1.7142857em;margin-top:1.7142857em;overflow-x:auto;padding-inline-end:1.1428571em;padding-bottom:.8571429em;padding-top:.8571429em;padding-inline-start:1.1428571em}.prose :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)){background-color:transparent;border-radius:0;border-width:0;color:inherit;font-family:inherit;font-size:inherit;font-weight:inherit;line-height:inherit;padding:0}.prose :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:none}.prose :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:none}.prose :where(table):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.875em;line-height:1.7142857;margin-bottom:2em;margin-top:2em;table-layout:auto;width:100%}.prose :where(thead):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-color:var(--tw-prose-th-borders);border-bottom-width:1px}.prose :where(thead th):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;padding-inline-end:.5714286em;padding-bottom:.5714286em;padding-inline-start:.5714286em;vertical-align:bottom}.prose :where(tbody tr):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-color:var(--tw-prose-td-borders);border-bottom-width:1px}.prose :where(tbody tr:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-width:0}.prose :where(tbody td):not(:where([class~=not-prose],[class~=not-prose] *)){vertical-align:baseline}.prose :where(tfoot):not(:where([class~=not-prose],[class~=not-prose] *)){border-top-color:var(--tw-prose-th-borders);border-top-width:1px}.prose :where(tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){vertical-align:top}.prose :where(th,td):not(:where([class~=not-prose],[class~=not-prose] *)){text-align:start}.prose :where(figure>*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0;margin-top:0}.prose :where(figcaption):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-captions);font-size:.875em;line-height:1.4285714;margin-top:.8571429em}.prose{--tw-prose-body:#374151;--tw-prose-headings:#111827;--tw-prose-lead:#4b5563;--tw-prose-links:#111827;--tw-prose-bold:#111827;--tw-prose-counters:#6b7280;--tw-prose-bullets:#d1d5db;--tw-prose-hr:#e5e7eb;--tw-prose-quotes:#111827;--tw-prose-quote-borders:#e5e7eb;--tw-prose-captions:#6b7280;--tw-prose-kbd:#111827;--tw-prose-kbd-shadows:17 24 39;--tw-prose-code:#111827;--tw-prose-pre-code:#e5e7eb;--tw-prose-pre-bg:#1f2937;--tw-prose-th-borders:#d1d5db;--tw-prose-td-borders:#e5e7eb;--tw-prose-invert-body:#d1d5db;--tw-prose-invert-headings:#fff;--tw-prose-invert-lead:#9ca3af;--tw-prose-invert-links:#fff;--tw-prose-invert-bold:#fff;--tw-prose-invert-counters:#9ca3af;--tw-prose-invert-bullets:#4b5563;--tw-prose-invert-hr:#374151;--tw-prose-invert-quotes:#f3f4f6;--tw-prose-invert-quote-borders:#374151;--tw-prose-invert-captions:#9ca3af;--tw-prose-invert-kbd:#fff;--tw-prose-invert-kbd-shadows:255 255 255;--tw-prose-invert-code:#fff;--tw-prose-invert-pre-code:#d1d5db;--tw-prose-invert-pre-bg:rgba(0,0,0,.5);--tw-prose-invert-th-borders:#4b5563;--tw-prose-invert-td-borders:#374151;font-size:1rem;line-height:1.75}.prose :where(picture>img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0;margin-top:0}.prose :where(li):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:.5em;margin-top:.5em}.prose :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.375em}.prose :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.375em}.prose :where(.prose>ul>li p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:.75em;margin-top:.75em}.prose :where(.prose>ul>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em}.prose :where(.prose>ul>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.25em}.prose :where(.prose>ol>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em}.prose :where(.prose>ol>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.25em}.prose :where(ul ul,ul ol,ol ul,ol ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:.75em;margin-top:.75em}.prose :where(dl):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.25em;margin-top:1.25em}.prose :where(dd):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5em;padding-inline-start:1.625em}.prose :where(hr+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose :where(h2+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose :where(h3+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose :where(h4+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose :where(thead th:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:0}.prose :where(thead th:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:0}.prose :where(tbody td,tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:.5714286em;padding-bottom:.5714286em;padding-top:.5714286em;padding-inline-start:.5714286em}.prose :where(tbody td:first-child,tfoot td:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:0}.prose :where(tbody td:last-child,tfoot td:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:0}.prose :where(figure):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:2em;margin-top:2em}.prose :where(.prose>:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose :where(.prose>:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.prose-lg{font-size:1.125rem;line-height:1.7777778}.prose-lg :where(p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.3333333em;margin-top:1.3333333em}.prose-lg :where([class~=lead]):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.2222222em;line-height:1.4545455;margin-bottom:1.0909091em;margin-top:1.0909091em}.prose-lg :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.6666667em;margin-top:1.6666667em;padding-inline-start:1em}.prose-lg :where(h1):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:2.6666667em;line-height:1;margin-bottom:.8333333em;margin-top:0}.prose-lg :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.6666667em;line-height:1.3333333;margin-bottom:1.0666667em;margin-top:1.8666667em}.prose-lg :where(h3):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.3333333em;line-height:1.5;margin-bottom:.6666667em;margin-top:1.6666667em}.prose-lg :where(h4):not(:where([class~=not-prose],[class~=not-prose] *)){line-height:1.5555556;margin-bottom:.4444444em;margin-top:1.7777778em}.prose-lg :where(img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.7777778em;margin-top:1.7777778em}.prose-lg :where(picture):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.7777778em;margin-top:1.7777778em}.prose-lg :where(picture>img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0;margin-top:0}.prose-lg :where(video):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.7777778em;margin-top:1.7777778em}.prose-lg :where(kbd):not(:where([class~=not-prose],[class~=not-prose] *)){border-radius:.3125rem;font-size:.8888889em;padding-inline-end:.4444444em;padding-bottom:.2222222em;padding-top:.2222222em;padding-inline-start:.4444444em}.prose-lg :where(code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8888889em}.prose-lg :where(h2 code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8666667em}.prose-lg :where(h3 code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.875em}.prose-lg :where(pre):not(:where([class~=not-prose],[class~=not-prose] *)){border-radius:.375rem;font-size:.8888889em;line-height:1.75;margin-bottom:2em;margin-top:2em;padding-inline-end:1.5em;padding-bottom:1em;padding-top:1em;padding-inline-start:1.5em}.prose-lg :where(ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.3333333em;margin-top:1.3333333em;padding-inline-start:1.5555556em}.prose-lg :where(ul):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.3333333em;margin-top:1.3333333em;padding-inline-start:1.5555556em}.prose-lg :where(li):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:.6666667em;margin-top:.6666667em}.prose-lg :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.4444444em}.prose-lg :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.4444444em}.prose-lg :where(.prose-lg>ul>li p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:.8888889em;margin-top:.8888889em}.prose-lg :where(.prose-lg>ul>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.3333333em}.prose-lg :where(.prose-lg>ul>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.3333333em}.prose-lg :where(.prose-lg>ol>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.3333333em}.prose-lg :where(.prose-lg>ol>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.3333333em}.prose-lg :where(ul ul,ul ol,ol ul,ol ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:.8888889em;margin-top:.8888889em}.prose-lg :where(dl):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.3333333em;margin-top:1.3333333em}.prose-lg :where(dt):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.3333333em}.prose-lg :where(dd):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.6666667em;padding-inline-start:1.5555556em}.prose-lg :where(hr):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:3.1111111em;margin-top:3.1111111em}.prose-lg :where(hr+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose-lg :where(h2+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose-lg :where(h3+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose-lg :where(h4+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose-lg :where(table):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8888889em;line-height:1.5}.prose-lg :where(thead th):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:.75em;padding-bottom:.75em;padding-inline-start:.75em}.prose-lg :where(thead th:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:0}.prose-lg :where(thead th:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:0}.prose-lg :where(tbody td,tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:.75em;padding-bottom:.75em;padding-top:.75em;padding-inline-start:.75em}.prose-lg :where(tbody td:first-child,tfoot td:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:0}.prose-lg :where(tbody td:last-child,tfoot td:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:0}.prose-lg :where(figure):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.7777778em;margin-top:1.7777778em}.prose-lg :where(figure>*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0;margin-top:0}.prose-lg :where(figcaption):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8888889em;line-height:1.5;margin-top:1em}.prose-lg :where(.prose-lg>:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose-lg :where(.prose-lg>:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.fixed{position:fixed}.relative{position:relative}.left-4{left:1rem}.top-0{top:0}.top-32{top:8rem}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-8{margin-bottom:2rem}.mt-1{margin-top:.25rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-12{height:3rem}.w-12{width:3rem}.w-64{width:16rem}.w-full{width:100%}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-none{max-width:none}.scroll-mt-32{scroll-margin-top:8rem}.list-disc{list-style-type:disc}.list-none{list-style-type:none}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-x-4>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-left:calc(1rem*(1 - var(--tw-space-x-reverse)));margin-right:calc(1rem*var(--tw-space-x-reverse))}.space-x-7>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-left:calc(1.75rem*(1 - var(--tw-space-x-reverse)));margin-right:calc(1.75rem*var(--tw-space-x-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(1rem*var(--tw-space-y-reverse));margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)))}.rounded{border-radius:.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.border{border-width:1px}.border-t{border-top-width:1px}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235/var(--tw-border-opacity,1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235/var(--tw-bg-opacity,1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.object-cover{-o-object-fit:cover;object-fit:cover}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-2{padding-bottom:.5rem;padding-top:.5rem}.py-4{padding-bottom:1rem;padding-top:1rem}.py-8{padding-top:2rem}.pb-8,.py-8{padding-bottom:2rem}.pl-4{padding-left:1rem}.pt-20{padding-top:5rem}.text-left{text-align:left}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem}.text-lg,.text-xl{line-height:1.75rem}.text-xl{font-size:1.25rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235/var(--tw-text-opacity,1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99/var(--tw-text-opacity,1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81/var(--tw-text-opacity,1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-shadow{transition-duration:.15s;transition-property:box-shadow;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-300{transition-duration:.3s}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216/var(--tw-bg-opacity,1))}.hover\:bg-gray-300:hover{--tw-bg-opacity:1;background-color:rgb(209 213 219/var(--tw-bg-opacity,1))}.hover\:text-blue-800:hover{--tw-text-opacity:1;color:rgb(30 64 175/var(--tw-text-opacity,1))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39/var(--tw-text-opacity,1))}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.hover\:shadow-lg:hover,.hover\:shadow-md:hover{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}@media (min-width:768px){.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (min-width:1024px){.lg\:block{display:block}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f8f9fa;border:1px solid #e2e8f0;border-radius:6px;margin:1em 0;padding:1em}code[class*=language-],pre[class*=language-]{color:#24292e;font-family:ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;font-size:14px;line-height:1.5;text-shadow:none}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#6a737d}.token.punctuation{color:#24292e}.token.boolean,.token.constant,.token.number,.token.property,.token.symbol,.token.tag{color:#005cc5}.token.attr-name,.token.builtin,.token.char,.token.selector,.token.string{color:#032f62}.language-css .token.string,.style .token.string,.token.atrule,.token.attr-value,.token.entity,.token.keyword,.token.operator,.token.url{color:#d73a49}.token.function{color:#6f42c1}.token.important,.token.regex,.token.variable{color:#e36209}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]{scroll-margin-top:5rem}:root{--border-radius:4px;--color-text:#333;--color-primary:#7026b9;--color-code-bg:#fff4db;--color-code:#8a6534;--font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";--font-mono:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--font-lg:18px;--font-md:16px;--font-sm:14px;--font-sx:12px;--line-height-loose:1.75;--line-height-normal:1.5;--line-height-dense:1.1;--space-1:4px;--space-2:8px;--space-3:16px;--space-4:24px;--space-5:32px;--space-6:64px;--size-content:54rem;--size-gutter:var(--space-5);--size-gap:var(--space-6)}html{-webkit-text-size-adjust:100%;box-sizing:border-box;font:sans-serif;font-size:var(--font-md);line-height:var(--line-height-normal);overflow-y:scroll}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;word-wrap:break-word;color:var(--color-text);font-family:sans-serif;font-family:var(--font-sans);font-weight:400;margin:0}a{background-color:transparent;color:var(--color-primary);font-weight:500;text-decoration:none;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:2px}a:active,a:hover{outline-width:0;text-decoration:none}abbr[title]{border-bottom:1px dotted rgba(0,0,0,.5);cursor:help;text-decoration:none}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{letter-spacing:-.01em;line-height:var(--line-height-dense);margin:0 0 3rem;padding:0}h1>b{color:var(--color-primary)}img{border-style:none;max-width:100%}code,kbd,pre,samp{font-family:var(--font-mono);font-size:1em;line-height:inherit}hr{background:rgba(0,0,0,.2);border:none;box-sizing:content-box;height:1px;margin-bottom:calc(var(--space-4) - 1px);margin-left:0;margin-right:0;margin-top:0;overflow:visible;padding:0}*,:after,:before{box-sizing:inherit}dd,dl,fieldset,figure,hgroup,img,ol,p,ul{margin:0;margin-bottom:var(--space-4);padding:0}ol,ul{list-style-image:none;list-style-position:outside;margin-left:var(--space-4)}pre{word-wrap:normal;background:rgba(0,0,0,.04);border-radius:var(--border-radius);font-size:.875rem;line-height:var(--line-height-normal);margin-bottom:var(--space-4);margin-left:0;margin-right:0;margin-top:0;overflow:auto;padding:var(--space-4)}b,dt,strong,th{font-weight:700}li{margin-bottom:calc(var(--space-4)/2)}ol li,ul li{padding-left:0}li>ol,li>ul{margin-bottom:calc(var(--space-4)/2);margin-left:var(--space-4);margin-top:calc(var(--space-4)/2)}blockquote :last-child,li :last-child,p :last-child{margin-bottom:0}li>p{margin-bottom:calc(var(--space-4)/2)}p{max-width:680px}code,kbd,samp{font-size:.875rem}abbr,acronym{border-bottom:1px dotted rgba(0,0,0,.5);cursor:help}code,tt{background-color:var(--color-code-bg);border-radius:var(--border-radius);color:var(--color-code);font-family:var(--font-mono);padding-bottom:.25em;padding-top:.25em;word-break:normal}pre code{background:none}code:after,code:before,tt:after,tt:before{content:"\00a0";letter-spacing:-.2em}pre code:after,pre code:before,pre tt:after,pre tt:before{content:none}</style><style type="text/css">
+    .toc-anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .toc-anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .toc-anchor svg,
+    h2 .toc-anchor svg,
+    h3 .toc-anchor svg,
+    h4 .toc-anchor svg,
+    h5 .toc-anchor svg,
+    h6 .toc-anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .toc-anchor svg,
+    h2:hover .toc-anchor svg,
+    h3:hover .toc-anchor svg,
+    h4:hover .toc-anchor svg,
+    h5:hover .toc-anchor svg,
+    h6:hover .toc-anchor svg,
+    h1 .toc-anchor:focus svg,
+    h2 .toc-anchor:focus svg,
+    h3 .toc-anchor:focus svg,
+    h4 .toc-anchor:focus svg,
+    h5 .toc-anchor:focus svg,
+    h6 .toc-anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><nav class="bg-white shadow-lg fixed w-full top-0 z-50"><div class="max-w-6xl mx-auto px-4"><div class="flex justify-center"><div class="flex space-x-7"><a class="flex items-center py-4 px-2 text-gray-700 hover:text-gray-900" href="/">首页</a><a class="flex items-center py-4 px-2 text-gray-700 hover:text-gray-900" href="/tags/">标签</a><a class="flex items-center py-4 px-2 text-gray-700 hover:text-gray-900" href="/about/">关于</a><a class="flex items-center py-4 px-2 text-gray-700 hover:text-gray-900" href="/links/">友链</a></div></div></div></nav><div class="text-center" style="margin:0 auto;max-width:var(--size-content);padding:var(--size-gutter)"><main class="pt-20"></main></div><div class="max-w-7xl mx-auto px-4 py-8 relative" style="padding-top:6rem;margin-top:-6rem"><div class="max-w-4xl mx-auto" style="scroll-margin-top:6rem"><h1 class="text-4xl font-bold mb-4">virtual-kubelet</h1><div class="prose prose-lg max-w-none"><div><!-- vim-markdown-toc GitLab -->
+<ul>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#kubelet">Kubelet</a></li>
+<li><a href="#virtual-kubelet">Virtual Kubelet</a>
+<ul>
+<li><a href="#eci">ECI</a></li>
+</ul>
+</li>
+<li><a href="#%E9%99%90%E5%88%B6">限制</a></li>
+<li><a href="#reference">Reference</a>
+<ul>
+<li><a href="#-httpsgithubcomvirtual-kubeletalibabacloud-eciblobmasterecigo">- https://github.com/virtual-kubelet/alibabacloud-eci/blob/master/eci.go</a></li>
+</ul>
+</li>
+</ul>
+<!-- vim-markdown-toc -->
+<h1 id="前言" style="position:relative;"><a href="#%E5%89%8D%E8%A8%80" aria-label="前言 permalink" class="toc-anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>前言</h1>
+<p>[Azure Container Instances (ACI)]
+最近写 Operator 的时候，由于资源问题，需要把 cr 调度到，阿里云的<a href="https://help.aliyun.com/document_detail/89129.html">ECI(Elastic Container Instance)</a>上，ECI 的底层是使用<code class="language-text">Virtual Kubelet</code>。</p>
+<p>这里稍作记录。</p>
+<h1 id="kubelet" style="position:relative;"><a href="#kubelet" aria-label="kubelet permalink" class="toc-anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Kubelet</h1>
+<p>kubelet 作为 Node 上一个重要的组件，调用 CRI，CNI，CSI 来创建相应的 Pod，并定期执行 Probe，那 Virtual Kubelet 是怎么实现的呢。</p>
+<h1 id="virtual-kubelet" style="position:relative;"><a href="#virtual-kubelet" aria-label="virtual kubelet permalink" class="toc-anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Virtual Kubelet</h1>
+<p>官方定义：Virtual Kubelet is an open-source Kubernetes kubelet implementation that masquerades as a kubelet.</p>
+<p>很多云厂商都提供了这个实现，代码都在<a href="https://github.com/virtual-kubelet">这个组织下</a></p>
+<ul>
+<li><a href="https://github.com/admiraltyio/multicluster-scheduler/blob/master/README.md#readme">Admiralty Multi-Cluster Scheduler</a></li>
+<li><a href="https://github.com/admiraltyio/multicluster-scheduler/blob/master/README.md#readme">Alibaba Cloud Elastic Container Instance (ECI)</a></li>
+<li><a href="https://github.com/virtual-kubelet/aws-fargate/blob/master/README.md#readme">AWS Fargate</a></li>
+<li><a href="https://github.com/virtual-kubelet/azure-batch/blob/master/README.md#readme">Azure Batch</a></li>
+<li><a href="https://github.com/virtual-kubelet/azure-aci/blob/master/README.md#readme">Azure Container Instances (ACI)</a></li>
+<li><a href="https://github.com/elotl/kip/blob/master/README.md#readme">Elotl Kip</a></li>
+<li><a href="https://github.com/virtual-kubelet/cri/blob/master/README.md#readme">Kubernetes Container Runtime Interface (CRI)</a></li>
+<li><a href="https://github.com/virtual-kubelet/huawei-cci/blob/master/README.md#readme">Huawei Cloud Container Instance (CCI)</a></li>
+<li><a href="https://github.com/virtual-kubelet/nomad/blob/master/README.md#readme">HashiCorp Nomad</a></li>
+<li><a href="https://github.com/liqotech/liqo/blob/master/README.md#readme">Liqo</a></li>
+<li><a href="https://github.com/virtual-kubelet/openstack-zun/blob/master/README.md#readme">OpenStack Zun</a></li>
+<li><a href="https://github.com/virtual-kubelet/tensile-kube/blob/master/README.md#readme">Tencent Games Tensile Kube</a></li>
+</ul>
+<h2 id="eci" style="position:relative;"><a href="#eci" aria-label="eci permalink" class="toc-anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ECI</h2>
+<p>这里重点看下 Aliyun ECI 的开源实现版本。</p>
+<p>在 main.go 里，创建 rootCmd，rootCmd 的 RunE func 是 runRootCommand，</p>
+<div class="gatsby-highlight" data-language="golang"><pre class="language-golang"><code class="language-golang">
+func NewCommand(ctx context.Context, name string, c Opts) *cobra.Command {
+	cmd := &amp;cobra.Command{
+		Use:   name,
+		Short: name + &quot; provides a virtual kubelet interface for your kubernetes cluster.&quot;,
+		Long: name + ` implements the Kubelet interface with a pluggable
+backend implementation allowing users to create kubernetes nodes without running the kubelet.
+This allows users to schedule kubernetes workloads on nodes that aren&#39;t running Kubernetes.`,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			return runRootCommand(ctx, c)
+		},
+	}
+
+	installFlags(cmd.Flags(), &amp;c)
+	return cmd
+}</code></pre></div>
+<p>runRootCommand 创建了，podInformer、secretInformer、configMapInformer、serviceInformer 四个 informer，同时将这四个 informer 传到 manager.NewResourceManager 里</p>
+<div class="gatsby-highlight" data-language="golang"><pre class="language-golang"><code class="language-golang">func runRootCommand(ctx context.Context, c Opts) error {
+    ......
+
+	// Create a shared informer factory for Kubernetes pods in the current namespace (if specified) and scheduled to the current node.
+	podInformerFactory := kubeinformers.NewSharedInformerFactoryWithOptions(
+		client,
+		c.InformerResyncPeriod,
+		kubeinformers.WithNamespace(c.KubeNamespace),
+		kubeinformers.WithTweakListOptions(func(options *metav1.ListOptions) {
+			options.FieldSelector = fields.OneTermEqualSelector(&quot;spec.nodeName&quot;, c.NodeName).String()
+		}))
+	podInformer := podInformerFactory.Core().V1().Pods()
+
+	// Create another shared informer factory for Kubernetes secrets and configmaps (not subject to any selectors).
+	scmInformerFactory := kubeinformers.NewSharedInformerFactoryWithOptions(client, c.InformerResyncPeriod)
+	// Create a secret informer and a config map informer so we can pass their listers to the resource manager.
+	secretInformer := scmInformerFactory.Core().V1().Secrets()
+	configMapInformer := scmInformerFactory.Core().V1().ConfigMaps()
+	serviceInformer := scmInformerFactory.Core().V1().Services()
+
+	go podInformerFactory.Start(ctx.Done())
+	go scmInformerFactory.Start(ctx.Done())
+
+	rm, err := manager.NewResourceManager(podInformer.Lister(), secretInformer.Lister(), configMapInformer.Lister(), serviceInformer.Lister())
+
+	p, err := alibabacloud.NewECIProvider(
+		c.ProviderConfigPath,
+		rm,
+		c.NodeName,
+		c.OperatingSystem,
+		os.Getenv(&quot;VKUBELET_POD_IP&quot;),
+		c.ListenPort,
+	)
+
+	var leaseClient v1beta1.LeaseInterface
+	if c.EnableNodeLease {
+		leaseClient = client.CoordinationV1beta1().Leases(corev1.NamespaceNodeLease)
+	}
+
+	pNode := NodeFromProvider(ctx, c.NodeName, taint, p, c.Version)
+	nodeRunner, err := node.NewNodeController(
+		node.NaiveNodeProvider{},
+		pNode,
+		client.CoreV1().Nodes(),
+		node.WithNodeEnableLeaseV1Beta1(leaseClient, nil),
+		node.WithNodeStatusUpdateErrorHandler(func(ctx context.Context, err error) error {
+			if !k8serrors.IsNotFound(err) {
+				return err
+			}
+
+			newNode := pNode.DeepCopy()
+			newNode.ResourceVersion = &quot;&quot;
+			_, err = client.CoreV1().Nodes().Create(newNode)
+			if err != nil {
+				return err
+			}
+		}),
+	)
+
+	eb := record.NewBroadcaster()
+	eb.StartLogging(log.G(ctx).Infof)
+	eb.StartRecordingToSink(&amp;corev1client.EventSinkImpl{Interface: client.CoreV1().Events(c.KubeNamespace)})
+
+	pc, err := node.NewPodController(node.PodControllerConfig{
+		PodClient:       client.CoreV1(),
+		PodInformer:     podInformer,
+		EventRecorder:   eb.NewRecorder(scheme.Scheme, corev1.EventSource{Component: path.Join(pNode.Name, &quot;pod-controller&quot;)}),
+		Provider:        p,
+		SecretLister:    secretInformer.Lister(),
+		ConfigMapLister: configMapInformer.Lister(),
+		ServiceLister:   serviceInformer.Lister(),
+	})
+
+	cancelHTTP, err := setupHTTPServer(ctx, p, apiConfig)
+	defer cancelHTTP()
+
+	go func() {
+		if err := pc.Run(ctx, c.PodSyncWorkers); err != nil &amp;&amp; errors.Cause(err) != context.Canceled {
+			log.G(ctx).Fatal(err)
+		}
+	}()
+
+	go func() {
+		if err := nodeRunner.Run(ctx); err != nil {
+			log.G(ctx).Fatal(err)
+		}
+	}()
+
+	&lt;-ctx.Done()
+	return nil
+}</code></pre></div>
+<p>ResourceManager 是一个结构体，属性是 4 个 Lister Interface，针对不对的资源，提供了 4 个相应的 method</p>
+<div class="gatsby-highlight" data-language="golang"><pre class="language-golang"><code class="language-golang">type ResourceManager struct {
+	podLister       corev1listers.PodLister
+	secretLister    corev1listers.SecretLister
+	configMapLister corev1listers.ConfigMapLister
+	serviceLister   corev1listers.ServiceLister
+}
+
+// GetPods returns a list of all known pods assigned to this virtual node.
+func (rm *ResourceManager) GetPods() []*v1.Pod {
+	l, err := rm.podLister.List(labels.Everything())
+	if err == nil {
+		return l
+	}
+	log.L.Errorf(&quot;failed to fetch pods from lister: %v&quot;, err)
+	return make([]*v1.Pod, 0)
+}
+
+// GetConfigMap retrieves the specified config map from the cache.
+func (rm *ResourceManager) GetConfigMap(name, namespace string) (*v1.ConfigMap, error) {
+	return rm.configMapLister.ConfigMaps(namespace).Get(name)
+}
+
+// GetSecret retrieves the specified secret from Kubernetes.
+func (rm *ResourceManager) GetSecret(name, namespace string) (*v1.Secret, error) {
+	return rm.secretLister.Secrets(namespace).Get(name)
+}
+
+// ListServices retrieves the list of services from Kubernetes.
+func (rm *ResourceManager) ListServices() ([]*v1.Service, error) {
+	return rm.serviceLister.List(labels.Everything())
+}
+</code></pre></div>
+<p>NewECIProvider 创建了一个 ECIProvider 的实例，它实现了 virtual-kubelet 的 PodLifecycleHandler Interface，</p>
+<p>通过环境变量传入了很多参数，这些参数在阿里云控制台安装 ack-virtual-node 组件，需要填入的，有些是必填，有些是可选的。</p>
+<p>rm 就是上文中创建的 ResourceManager，</p>
+<div class="gatsby-highlight" data-language="golang"><pre class="language-golang"><code class="language-golang">// PodLifecycleHandler defines the interface used by the PodController to react
+// to new and changed pods scheduled to the node that is being managed.
+//
+// Errors produced by these methods should implement an interface from
+// github.com/virtual-kubelet/virtual-kubelet/errdefs package in order for the
+// core logic to be able to understand the type of failure.
+type PodLifecycleHandler interface {
+	// CreatePod takes a Kubernetes Pod and deploys it within the provider.
+	CreatePod(ctx context.Context, pod *corev1.Pod) error
+
+	// UpdatePod takes a Kubernetes Pod and updates it within the provider.
+	UpdatePod(ctx context.Context, pod *corev1.Pod) error
+
+	// DeletePod takes a Kubernetes Pod and deletes it from the provider.
+	DeletePod(ctx context.Context, pod *corev1.Pod) error
+
+	// GetPod retrieves a pod by name from the provider (can be cached).
+	GetPod(ctx context.Context, namespace, name string) (*corev1.Pod, error)
+
+	// GetPodStatus retrieves the status of a pod by name from the provider.
+	GetPodStatus(ctx context.Context, namespace, name string) (*corev1.PodStatus, error)
+
+	// GetPods retrieves a list of all pods running on the provider (can be cached).
+	GetPods(context.Context) ([]*corev1.Pod, error)
+}
+
+func NewECIProvider(config string, rm *manager.ResourceManager, nodeName, operatingSystem string, internalIP string, daemonEndpointPort int32) (*ECIProvider, error) {
+	var p ECIProvider
+	var err error
+	p.resourceManager = rm
+	p.clusterName = os.Getenv(&quot;ECI_CLUSTER_NAME&quot;)
+	p.region = os.Getenv(&quot;ECI_REGION&quot;)
+	accessKey  := os.Getenv(&quot;ECI_ACCESS_KEY&quot;)
+	secretKey := os.Getenv(&quot;ECI_SECRET_KEY&quot;)
+	p.secureGroup == os.Getenv(&quot;ECI_SECURITY_GROUP&quot;)
+	p.vSwitch= os.Getenv(&quot;ECI_VSWITCH&quot;)
+
+	p.eciClient, err = eci.NewClientWithAccessKey(p.region, accessKey, secretKey)
+	p.cpu = &quot;1000&quot;
+	p.memory = &quot;4Ti&quot;
+	p.pods = &quot;1000&quot;
+
+	p.cpu = os.Getenv(&quot;ECI_QUOTA_CPU&quot;)
+	p.memory= os.Getenv(&quot;ECI_QUOTA_MEMORY&quot;)
+
+	p.pods= os.Getenv(&quot;ECI_QUOTA_POD&quot;)
+	p.operatingSystem = operatingSystem
+	p.nodeName = nodeName
+	p.internalIP = internalIP
+	p.daemonEndpointPort = daemonEndpointPort
+	return &amp;p, err
+}
+</code></pre></div>
+<p>接下来看下，ECIProvider 是如何实现 PodLifecycleHandler Interface 的</p>
+<p>CreatePod 调用 eci 的 CreateContainerGroupRequest 请求，把 pod 转换成 Container Group</p>
+<p>DeletePod 调用 eci 的 CreateDescribeContainerGroupsRequest 查询到 ContainerGroup，然后在调用 CreateDeleteContainerGroupRequest 请求</p>
+<p>GetPods 调用 eci 的 CreateDescribeContainerGroupsRequest 请求，把 Container Group 转化成 pod</p>
+<p>GetPod 调用 GetPods 返回所有 Pod，然后 namespace, name 遍历 filter 对应的 Pod</p>
+<p>GetPodStatus 只是返回 GetPod 的 status 部分</p>
+<p>它还实现了 GetContainerLogs method，调用 CreateDescribeContainerLogRequest 请求取回日志</p>
+<p>请求阿里云相关的代码，都在 eci 目录下。</p>
+<div class="gatsby-highlight" data-language="golang"><pre class="language-golang"><code class="language-golang">// 	CreatePod(ctx context.Context, pod *corev1.Pod) error
+// 解析Pod, 组装CreateContainerGroupRequest，这两个struct和Pod里定义非常相似。
+type CreateContainerGroupRequest struct {
+	*requests.RpcRequest
+	Containers               []CreateContainer         `position:&quot;Query&quot; name:&quot;Container&quot;  type:&quot;Repeated&quot;`
+	InitContainers           []CreateContainer         `position:&quot;Query&quot; name:&quot;InitContainer&quot;  type:&quot;Repeated&quot;`
+	ResourceOwnerId          requests.Integer          `position:&quot;Query&quot; name:&quot;ResourceOwnerId&quot;`
+	SecurityGroupId          string                    `position:&quot;Query&quot; name:&quot;SecurityGroupId&quot;`
+	ImageRegistryCredentials []ImageRegistryCredential `position:&quot;Query&quot; name:&quot;ImageRegistryCredential&quot;  type:&quot;Repeated&quot;`
+	Tags                     []Tag                     `position:&quot;Query&quot; name:&quot;Tag&quot;  type:&quot;Repeated&quot;`
+	ResourceOwnerAccount     string                    `position:&quot;Query&quot; name:&quot;ResourceOwnerAccount&quot;`
+	RestartPolicy            string                    `position:&quot;Query&quot; name:&quot;RestartPolicy&quot;`
+	OwnerAccount             string                    `position:&quot;Query&quot; name:&quot;OwnerAccount&quot;`
+	OwnerId                  requests.Integer          `position:&quot;Query&quot; name:&quot;OwnerId&quot;`
+	VSwitchId                string                    `position:&quot;Query&quot; name:&quot;VSwitchId&quot;`
+	Volumes                  []Volume                  `position:&quot;Query&quot; name:&quot;Volume&quot;  type:&quot;Repeated&quot;`
+	ContainerGroupName       string                    `position:&quot;Query&quot; name:&quot;ContainerGroupName&quot;`
+	ZoneId                   string                    `position:&quot;Query&quot; name:&quot;ZoneId&quot;`
+}
+
+type CreateContainer struct {
+	Name            string           `name:&quot;Name&quot;`
+	Image           string           `name:&quot;Image&quot;`
+	Memory          requests.Float   `name:&quot;Memory&quot;`
+	Cpu             requests.Float   `name:&quot;Cpu&quot;`
+	WorkingDir      string           `name:&quot;WorkingDir&quot;`
+	ImagePullPolicy string           `name:&quot;ImagePullPolicy&quot;`
+	Commands        []string         `name:&quot;Command&quot;  type:&quot;Repeated&quot;`
+	Args            []string         `name:&quot;Arg&quot;  type:&quot;Repeated&quot;`
+	VolumeMounts    []VolumeMount    `name:&quot;VolumeMount&quot;  type:&quot;Repeated&quot;`
+	Ports           []ContainerPort  `name:&quot;Port&quot;  type:&quot;Repeated&quot;`
+	EnvironmentVars []EnvironmentVar `name:&quot;EnvironmentVar&quot;  type:&quot;Repeated&quot;`
+}
+
+func (p *ECIProvider) CreatePod(ctx context.Context, pod *v1.Pod) error {
+	//Ignore daemonSet Pod
+	request := eci.CreateCreateContainerGroupRequest()
+	request.RestartPolicy = string(pod.Spec.RestartPolicy)
+
+	containers, err := p.getContainers(pod, false)
+	initContainers, err := p.getContainers(pod, true)
+
+	// get registry creds
+	creds, err := p.getImagePullSecrets(pod)
+
+	// get volumes
+	volumes, err := p.getVolumes(pod)
+
+	// assign all the things
+	request.Containers = containers
+	request.InitContainers = initContainers
+	request.Volumes = volumes
+	request.ImageRegistryCredentials = creds
+	CreationTimestamp := pod.CreationTimestamp.UTC().Format(podTagTimeFormat)
+	tags := []eci.Tag{
+		eci.Tag{Key: &quot;ClusterName&quot;, Value: p.clusterName},
+		eci.Tag{Key: &quot;NodeName&quot;, Value: p.nodeName},
+		eci.Tag{Key: &quot;NameSpace&quot;, Value: pod.Namespace},
+		eci.Tag{Key: &quot;PodName&quot;, Value: pod.Name},
+		eci.Tag{Key: &quot;UID&quot;, Value: string(pod.UID)},
+		eci.Tag{Key: &quot;CreationTimestamp&quot;, Value: CreationTimestamp},
+	}
+
+	ContainerGroupName := containerGroupName(pod)
+	request.Tags = tags
+	request.SecurityGroupId = p.secureGroup
+	request.VSwitchId = p.vSwitch
+	request.ContainerGroupName = ContainerGroupName
+	msg := fmt.Sprintf(&quot;CreateContainerGroup request %+v&quot;, request)
+	response, err := p.eciClient.CreateContainerGroup(request)
+	msg = fmt.Sprintf(&quot;CreateContainerGroup successed. %s, %s, %s&quot;, response.RequestId, response.ContainerGroupId, ContainerGroupName)
+	return nil
+}
+
+// UpdatePod 没有实现
+func (p *ECIProvider) UpdatePod(ctx context.Context, pod *v1.Pod) error {
+	return nil
+}
+
+// DeletePod deletes the specified pod out of ECI.
+func (p *ECIProvider) DeletePod(ctx context.Context, pod *v1.Pod) error {
+	eciId := &quot;&quot;
+	for _, cg := range p.GetCgs() {
+		if getECITagValue(&amp;cg, &quot;PodName&quot;) == pod.Name &amp;&amp; getECITagValue(&amp;cg, &quot;NameSpace&quot;) == pod.Namespace {
+			eciId = cg.ContainerGroupId
+			break
+		}
+	}
+	if eciId == &quot;&quot; {
+		return errdefs.NotFoundf(&quot;DeletePod can&#39;t find Pod %s-%s&quot;, pod.Namespace, pod.Name)
+	}
+
+	request := eci.CreateDeleteContainerGroupRequest()
+	request.ContainerGroupId = eciId
+	_, err := p.eciClient.DeleteContainerGroup(request)
+	return wrapError(err)
+}
+
+// GetPod returns a pod by name that is running inside ECI
+// returns nil if a pod by that name is not found.
+func (p *ECIProvider) GetPod(ctx context.Context, namespace, name string) (*v1.Pod, error) {
+	pods, err := p.GetPods(ctx)
+	if err != nil {
+		return nil, err
+	}
+	for _, pod := range pods {
+		if pod.Name == name &amp;&amp; pod.Namespace == namespace {
+			return pod, nil
+		}
+	}
+	return nil, nil
+}
+
+</code></pre></div>
+<p>接着实例化了一个 node.NewNodeController，并且通过 goroutine 启动起来</p>
+<p>NodeFromProvider 定义 v1.Node 结构体，</p>
+<div class="gatsby-highlight" data-language="golang"><pre class="language-golang"><code class="language-golang">func NodeFromProvider(ctx context.Context, name string, taint *v1.Taint, p providers.Provider, version string) *v1.Node {
+	taints := make([]v1.Taint, 0)
+
+	if taint != nil {
+		taints = append(taints, *taint)
+	}
+
+	node := &amp;v1.Node{
+		ObjectMeta: metav1.ObjectMeta{
+			Name: name,
+			Labels: map[string]string{
+				&quot;type&quot;:                   &quot;virtual-kubelet&quot;,
+				&quot;kubernetes.io/role&quot;:     &quot;agent&quot;,
+				&quot;beta.kubernetes.io/os&quot;:  strings.ToLower(p.OperatingSystem()),
+				&quot;kubernetes.io/hostname&quot;: name,
+				&quot;alpha.service-controller.kubernetes.io/exclude-balancer&quot;: &quot;true&quot;,
+			},
+		},
+		Spec: v1.NodeSpec{
+			Taints: taints,
+		},
+		Status: v1.NodeStatus{
+			NodeInfo: v1.NodeSystemInfo{
+				OperatingSystem: p.OperatingSystem(),
+				Architecture:    &quot;amd64&quot;,
+				KubeletVersion:  version,
+			},
+			Capacity:        p.Capacity(ctx),
+			Allocatable:     p.Capacity(ctx),
+			Conditions:      p.NodeConditions(ctx),
+			Addresses:       p.NodeAddresses(ctx),
+			DaemonEndpoints: *p.NodeDaemonEndpoints(ctx),
+		},
+	}
+	return node
+}
+pNode := NodeFromProvider(ctx, c.NodeName, taint, p, c.Version)
+
+
+
+nodeRunner, err := node.NewNodeController(
+    node.NaiveNodeProvider{},
+    pNode,
+    client.CoreV1().Nodes(),
+    node.WithNodeEnableLeaseV1Beta1(leaseClient, nil),
+    node.WithNodeStatusUpdateErrorHandler(func(ctx context.Context, err error) error {
+        if !k8serrors.IsNotFound(err) {
+            return err
+        }
+
+        log.G(ctx).Debug(&quot;node not found&quot;)
+        newNode := pNode.DeepCopy()
+        newNode.ResourceVersion = &quot;&quot;
+        _, err = client.CoreV1().Nodes().Create(newNode)
+        if err != nil {
+            return err
+        }
+        log.G(ctx).Debug(&quot;created new node&quot;)
+        return nil
+    }),
+)
+
+go func() {
+    if err := nodeRunner.Run(ctx); err != nil {
+        log.G(ctx).Fatal(err)
+    }
+}()
+
+// 定义了两个Interval，pingInterval statusInterval，下面control会用到
+func (n *NodeController) Run(ctx context.Context) error {
+	if n.pingInterval == time.Duration(0) {
+		n.pingInterval = DefaultPingInterval
+	}
+	if n.statusInterval == time.Duration(0) {
+		n.statusInterval = DefaultStatusUpdateInterval
+	}
+
+	n.chStatusUpdate = make(chan *corev1.Node)
+	n.p.NotifyNodeStatus(ctx, func(node *corev1.Node) {
+		n.chStatusUpdate &lt;- node
+	})
+
+	if err := n.ensureNode(ctx); err != nil {
+		return err
+	}
+
+	if n.leases == nil {
+		n.disableLease = true
+		return n.controlLoop(ctx)
+	}
+
+	n.lease = newLease(n.lease)
+	setLeaseAttrs(n.lease, n.n, n.pingInterval*5)
+
+	l, err := ensureLease(ctx, n.leases, n.lease)
+	n.lease = l
+
+	return n.controlLoop(ctx)
+}
+
+// 最终是执行的controlLoop，如果k8s支持node lease直接更新lease，否则就更新node status
+func (n *NodeController) controlLoop(ctx context.Context) error {
+	pingTimer := time.NewTimer(n.pingInterval)
+	defer pingTimer.Stop()
+
+	statusTimer := time.NewTimer(n.statusInterval)
+	defer statusTimer.Stop()
+	if n.disableLease {
+		// hack to make sure this channel always blocks since we won&#39;t be using it
+		if !statusTimer.Stop() {
+			&lt;-statusTimer.C
+		}
+	}
+
+	close(n.chReady)
+
+	for {
+		select {
+		case &lt;-ctx.Done():
+			return nil
+		case updated := &lt;-n.chStatusUpdate:
+			var t *time.Timer
+			if n.disableLease {
+				t = pingTimer
+			} else {
+				t = statusTimer
+			}
+
+			log.G(ctx).Debug(&quot;Received node status update&quot;)
+			// Performing a status update so stop/reset the status update timer in this
+			// branch otherwise there could be an uneccessary status update.
+			if !t.Stop() {
+				&lt;-t.C
+			}
+
+			n.n.Status = updated.Status
+			if err := n.updateStatus(ctx, false); err != nil {
+				log.G(ctx).WithError(err).Error(&quot;Error handling node status update&quot;)
+			}
+			t.Reset(n.statusInterval)
+		case &lt;-statusTimer.C:
+			if err := n.updateStatus(ctx, false); err != nil {
+				log.G(ctx).WithError(err).Error(&quot;Error handling node status update&quot;)
+			}
+			statusTimer.Reset(n.statusInterval)
+		case &lt;-pingTimer.C:
+			if err := n.handlePing(ctx); err != nil {
+				log.G(ctx).WithError(err).Error(&quot;Error while handling node ping&quot;)
+			} else {
+				log.G(ctx).Debug(&quot;Successful node ping&quot;)
+			}
+			pingTimer.Reset(n.pingInterval)
+		}
+	}
+}
+</code></pre></div>
+<p>然后又启动了一个 PodController，然后把它 Run 起来了。</p>
+<p>然后创建了两个 Queue，分别用来 controller Pod 和 PodStatus，重点看下 Pod Queue</p>
+<p>AddEventHandler 把 AddFunc/UpdateFunc/DeleteFunc，放入到 queue 里，然后通过 runWorker 去消费，真正消费的函数是 syncHandler</p>
+<p>deletePod 会调用 pc.provider.DeletePod 去删除</p>
+<p>pc.createOrUpdatePod 会调用 pc.provider.GetPod 判断有没有 pod，没有的话创建，有的话就更新</p>
+<div class="gatsby-highlight" data-language="golang"><pre class="language-golang"><code class="language-golang">pc, err := node.NewPodController(node.PodControllerConfig{
+    PodClient:       client.CoreV1(),
+    PodInformer:     podInformer,
+    EventRecorder:   eb.NewRecorder(scheme.Scheme, corev1.EventSource{Component: path.Join(pNode.Name, &quot;pod-controller&quot;)}),
+    Provider:        p,
+    SecretLister:    secretInformer.Lister(),
+    ConfigMapLister: configMapInformer.Lister(),
+    ServiceLister:   serviceInformer.Lister(),
+})
+
+if err := pc.Run(ctx, c.PodSyncWorkers); err != nil &amp;&amp; errors.Cause(err) != context.Canceled {
+        log.G(ctx).Fatal(err)
+}
+
+func (pc *PodController) Run(ctx context.Context, podSyncWorkers int) error {
+    k8sQ := workqueue.NewNamedRateLimitingQueue(workqueue.DefaultControllerRateLimiter(), &quot;syncPodsFromKubernetes&quot;)
+	defer k8sQ.ShutDown()
+
+	podStatusQueue := workqueue.NewNamedRateLimitingQueue(workqueue.DefaultControllerRateLimiter(), &quot;syncPodStatusFromProvider&quot;)
+	pc.runProviderSyncWorkers(ctx, podStatusQueue, podSyncWorkers)
+	pc.runSyncFromProvider(ctx, podStatusQueue)
+	defer podStatusQueue.ShutDown()
+
+	// Set up event handlers for when Pod resources change.
+	pc.podsInformer.Informer().AddEventHandler(cache.ResourceEventHandlerFuncs{
+		AddFunc: func(pod interface{}) {
+			if key, err := cache.MetaNamespaceKeyFunc(pod); err != nil {
+				log.L.Error(err)
+			} else {
+				k8sQ.AddRateLimited(key)
+			}
+		},
+		UpdateFunc: func(oldObj, newObj interface{}) {
+			oldPod := oldObj.(*corev1.Pod).DeepCopy()
+			newPod := newObj.(*corev1.Pod).DeepCopy()
+			newPod.ResourceVersion = oldPod.ResourceVersion
+			if reflect.DeepEqual(oldPod.ObjectMeta, newPod.ObjectMeta) &amp;&amp; reflect.DeepEqual(oldPod.Spec, newPod.Spec) {
+				return
+			}
+			// At this point we know that something in .metadata or .spec has changed, so we must proceed to sync the pod.
+				k8sQ.AddRateLimited(key)
+		},
+		DeleteFunc: func(pod interface{}) {
+			if key, err := cache.DeletionHandlingMetaNamespaceKeyFunc(pod); err != nil {
+				log.L.Error(err)
+			} else {
+				k8sQ.AddRateLimited(key)
+			}
+		},
+	})
+
+	pc.deleteDanglingPods(ctx, podSyncWorkers)
+
+	for id := 0; id &lt; podSyncWorkers; id++ {
+		go wait.Until(func() {
+			// Use the worker&#39;s &quot;index&quot; as its ID so we can use it for tracing.
+			pc.runWorker(ctx, strconv.Itoa(id), k8sQ)
+		}, time.Second, ctx.Done())
+	}
+
+	close(pc.ready)
+
+	&lt;-ctx.Done()
+
+	return nil
+}
+
+func (pc *PodController) runWorker(ctx context.Context, workerId string, q workqueue.RateLimitingInterface) {
+	for pc.processNextWorkItem(ctx, workerId, q) {
+	}
+}
+
+func (pc *PodController) processNextWorkItem(ctx context.Context, workerId string, q workqueue.RateLimitingInterface) bool {
+	return handleQueueItem(ctx, q, pc.syncHandler)
+}
+
+func (pc *PodController) syncHandler(ctx context.Context, key string) error {
+	ctx = span.WithField(ctx, &quot;key&quot;, key)
+
+	namespace, name, err := cache.SplitMetaNamespaceKey(key)
+	// Get the Pod resource with this namespace/name.
+	pod, err := pc.podsLister.Pods(namespace).Get(name)
+	if err != nil {
+		if !errors.IsNotFound(err) {
+			err := pkgerrors.Wrapf(err, &quot;failed to fetch pod with key %q from lister&quot;, key)
+			span.SetStatus(err)
+			return err
+		}
+		// At this point we know the Pod resource doesn&#39;t exist, which most probably means it was deleted.
+		// Hence, we must delete it from the provider if it still exists there.
+		if err := pc.deletePod(ctx, namespace, name); err != nil {
+			err := pkgerrors.Wrapf(err, &quot;failed to delete pod %q in the provider&quot;, loggablePodNameFromCoordinates(namespace, name))
+			span.SetStatus(err)
+			return err
+		}
+		return nil
+	}
+	// At this point we know the Pod resource has either been created or updated (which includes being marked for deletion).
+	return pc.syncPodInProvider(ctx, pod)
+}
+
+func (pc *PodController) syncPodInProvider(ctx context.Context, pod *corev1.Pod) error {
+	ctx, span := trace.StartSpan(ctx, &quot;syncPodInProvider&quot;)
+	defer span.End()
+
+	// Add the pod&#39;s attributes to the current span.
+	ctx = addPodAttributes(ctx, span, pod)
+
+	// Check whether the pod has been marked for deletion.
+	// If it does, guarantee it is deleted in the provider and Kubernetes.
+	if pod.DeletionTimestamp != nil {
+		if err := pc.deletePod(ctx, pod.Namespace, pod.Name); err != nil {
+			err := pkgerrors.Wrapf(err, &quot;failed to delete pod %q in the provider&quot;, loggablePodName(pod))
+			span.SetStatus(err)
+			return err
+		}
+		return nil
+	}
+
+	// Ignore the pod if it is in the &quot;Failed&quot; or &quot;Succeeded&quot; state.
+	if pod.Status.Phase == corev1.PodFailed || pod.Status.Phase == corev1.PodSucceeded {
+		log.G(ctx).Warnf(&quot;skipping sync of pod %q in %q phase&quot;, loggablePodName(pod), pod.Status.Phase)
+		return nil
+	}
+
+	// Create or update the pod in the provider.
+	if err := pc.createOrUpdatePod(ctx, pod); err != nil {
+		err := pkgerrors.Wrapf(err, &quot;failed to sync pod %q in the provider&quot;, loggablePodName(pod))
+		span.SetStatus(err)
+		return err
+	}
+	return nil
+}</code></pre></div>
+<p>启动一个 HTTPServer</p>
+<div class="gatsby-highlight" data-language="golang"><pre class="language-golang"><code class="language-golang">cancelHTTP, err := setupHTTPServer(ctx, p, apiConfig)
+if err != nil {
+    return err
+}
+defer cancelHTTP()
+
+// 其中pod的handler，获取运行的pod、获取容器日志、执行命令
+func PodHandler(p PodHandlerConfig, debug bool) http.Handler {
+	r := mux.NewRouter()
+
+	// This matches the behaviour in the reference kubelet
+	r.StrictSlash(true)
+	if debug {
+		r.HandleFunc(&quot;/runningpods/&quot;, HandleRunningPods(p.GetPods)).Methods(&quot;GET&quot;)
+	}
+	r.HandleFunc(&quot;/containerLogs/{namespace}/{pod}/{container}&quot;, HandleContainerLogs(p.GetContainerLogs)).Methods(&quot;GET&quot;)
+	r.HandleFunc(&quot;/exec/{namespace}/{pod}/{container}&quot;, HandleContainerExec(p.RunInContainer)).Methods(&quot;POST&quot;)
+	r.NotFoundHandler = http.HandlerFunc(NotFound)
+	return r
+}
+
+// PodStatsSummaryHandler 提供了/stats/summary，用于获取pod 的status，这是kubelet提供的一个能力。
+func PodStatsSummaryHandler(f PodStatsSummaryHandlerFunc) http.Handler {
+	if f == nil {
+		return http.HandlerFunc(NotImplemented)
+	}
+
+	r := mux.NewRouter()
+
+	const summaryRoute = &quot;/stats/summary&quot;
+	h := HandlePodStatsSummary(f)
+
+	r.Handle(summaryRoute, ochttp.WithRouteTag(h, &quot;PodStatsSummaryHandler&quot;)).Methods(&quot;GET&quot;)
+	r.Handle(summaryRoute+&quot;/&quot;, ochttp.WithRouteTag(h, &quot;PodStatsSummaryHandler&quot;)).Methods(&quot;GET&quot;)
+
+	r.NotFoundHandler = http.HandlerFunc(NotFound)
+	return r
+}</code></pre></div>
+<h1 id="限制" style="position:relative;"><a href="#%E9%99%90%E5%88%B6" aria-label="限制 permalink" class="toc-anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>限制</h1>
+<ol>
+<li>不支持 DaemonSet，比如说日志采集的 fluentd</li>
+<li>不支持 HostPath 的挂载</li>
+<li>不支持 HostNetwork</li>
+<li>不支持 NodePort 的 Service</li>
+</ol>
+<h1 id="reference" style="position:relative;"><a href="#reference" aria-label="reference permalink" class="toc-anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference</h1>
+<ul>
+<li><a href="https://virtual-kubelet.io/">https://virtual-kubelet.io/</a></li>
+<li><a href="https://github.com/virtual-kubelet/virtual-kubelet">https://github.com/virtual-kubelet/virtual-kubelet</a></li>
+<li><a href="https://github.com/virtual-kubelet/aws-fargate/blob/master/provider.go">https://github.com/virtual-kubelet/aws-fargate/blob/master/provider.go</a></li>
+<li><a href="https://github.com/virtual-kubelet/nomad/blob/master/nomad.go">https://github.com/virtual-kubelet/nomad/blob/master/nomad.go</a></li>
+<li><a href="https://github.com/virtual-kubelet/alibabacloud-eci/blob/master/eci.go">https://github.com/virtual-kubelet/alibabacloud-eci/blob/master/eci.go</a></li>
+<li></li>
+</ul></div></div></div><div class="max-w-4xl mx-auto mt-8"><div class="giscus"></div></div><div class="hidden lg:block fixed left-4 top-32 w-64"><div class="bg-white p-4 rounded-lg shadow-lg" style="max-height:calc(100vh - 12rem);overflow-y:auto"><h3 class="font-bold mb-2 text-left">目录: </h3><div class="text-left"><ul>
+<li>
+<p><a href="#%E5%89%8D%E8%A8%80">前言</a></p>
+</li>
+<li>
+<p><a href="#kubelet">Kubelet</a></p>
+</li>
+<li>
+<p><a href="#virtual-kubelet">Virtual Kubelet</a></p>
+<ul>
+<li><a href="#eci">ECI</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%E9%99%90%E5%88%B6">限制</a></p>
+</li>
+<li>
+<p><a href="#reference">Reference</a></p>
+</li>
+</ul></div></div></div></div><footer class="text-center py-4 mt-8 border-t">© 2025 · Built with Gatsby</footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2022-08-16-virtual-kubelet/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-ec515adc39aa7430d310.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-051f7e1a395ea4ec2b2a.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-093de8076e2cf835e1d3.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-c34369a01a85b628d9ac.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-7666f811b66803f137c5.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-512d381bd81244b1af9c.js\"],\"component---src-pages-using-ssr-js\":[\"/component---src-pages-using-ssr-js-005fd2817f4487ca3dc9.js\"],\"component---src-templates-blog-list-js\":[\"/component---src-templates-blog-list-js-5fadf6a59ac6c5cfa4ee.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-9498a20d0ef2eefd61ce.js\"],\"component---src-templates-tags-js\":[\"/component---src-templates-tags-js-13eab85942606ca6630c.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="7d877e823468a4de5503";</script><script src="/webpack-runtime-7789ddc4cd9085cabb24.js" async></script><script src="/framework-6a525285796fb83f2864.js" async></script><script src="/app-ec515adc39aa7430d310.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
