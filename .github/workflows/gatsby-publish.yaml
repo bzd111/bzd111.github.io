@@ -14,7 +14,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Gatsby Publish
-        uses: enriikke/gatsby-gh-pages-action@v2.2.0
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
         with:
-          access-token: ${{ secrets.GITHUB_TOKEN }}
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Gatsby site
+        run: npm run build
+
+      - name: Publish to master
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: master
+          publish_dir: ./public
+          cname: bzd111.top
