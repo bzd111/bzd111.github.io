@@ -50,7 +50,7 @@ const BlogPost = ({ data }) => {
         {/* Main Content */}
         <div className="max-w-4xl mx-auto" style={{ scrollMarginTop: "6rem" }}>
           <h1 className="text-4xl font-bold mb-4">{post.frontmatter.title}</h1>
-          <div className="prose prose-lg max-w-none">
+          <div className="prose prose-lg max-w-none blog-post-content">
             <div
               dangerouslySetInnerHTML={{
                 __html: post.html

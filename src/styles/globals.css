@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Keep wide technical tables usable on narrow blog layouts. */
+.blog-post-content table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.blog-post-content img {
+  height: auto;
+}
+
+.blog-post-content p:has(> a > img) {
+  max-width: none;
+}
